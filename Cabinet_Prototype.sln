@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cabinet_Prototype", "Cabinet_Prototype.csproj", "{2880A593-9101-46C9-A907-7889A11EBE3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2880A593-9101-46C9-A907-7889A11EBE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2880A593-9101-46C9-A907-7889A11EBE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2880A593-9101-46C9-A907-7889A11EBE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2880A593-9101-46C9-A907-7889A11EBE3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C549D7E-0D5F-4F92-B15C-4D62548AC3B5}
+	EndGlobalSection
+EndGlobal
