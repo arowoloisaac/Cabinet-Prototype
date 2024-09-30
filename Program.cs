@@ -1,9 +1,12 @@
 
+using Cabinet_Prototype.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Cabinet_Prototype
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +17,14 @@ namespace Cabinet_Prototype
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services
+                .AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             var app = builder.Build();
+
+            using var serviceScope = app.Services.CreateScope();
+            var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
+            context.Database.Migrate();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
