@@ -9,5 +9,7 @@
         public Guid CourseId { get; set; }
 
         public Guid StudentId { get; set; }
+
+        public Guid TeacherId { get; set; }
     }
 }

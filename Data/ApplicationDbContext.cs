@@ -26,6 +26,8 @@ namespace Cabinet_Prototype.Data
 
         public DbSet<Course> Courses { get; set; }
 
+        public DbSet<Result> Results { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

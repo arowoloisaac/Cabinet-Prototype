@@ -17,9 +17,10 @@ namespace Cabinet_Prototype.Models
 
         public ClassFormat Format { get; set; }
 
-        public Course Course { get; set; }
+        public Course? Course { get; set; }
         
         public Group? Groups { get; set; }
-        //public Faculty? Faculty { get; set; } 
+
+        public Guid TeacherId { get; set; }
     }
 }

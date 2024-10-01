@@ -4,6 +4,7 @@ using Cabinet_Prototype.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cabinet_Prototype.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240930154816_UpdatedReesultToTheDatabase")]
+    partial class UpdatedReesultToTheDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -197,19 +200,11 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("TeacherId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 
                     b.HasIndex("GroupsId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Schedules");
                 });
@@ -489,10 +484,6 @@ namespace Cabinet_Prototype.Migrations
                         .WithMany("Schedules")
                         .HasForeignKey("GroupsId");
 
-                    b.HasOne("Cabinet_Prototype.Models.User", null)
-                        .WithMany("Schedules")
-                        .HasForeignKey("UserId");
-
                     b.Navigation("Course");
 
                     b.Navigation("Groups");
@@ -585,8 +576,6 @@ namespace Cabinet_Prototype.Migrations
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
                 {
                     b.Navigation("Courses");
-
-                    b.Navigation("Schedules");
 
                     b.Navigation("StudentResults");
                 });

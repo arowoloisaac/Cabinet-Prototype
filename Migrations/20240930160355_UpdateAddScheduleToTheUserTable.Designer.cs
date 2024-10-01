@@ -4,6 +4,7 @@ using Cabinet_Prototype.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cabinet_Prototype.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240930160355_UpdateAddScheduleToTheUserTable")]
+    partial class UpdateAddScheduleToTheUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -200,16 +203,13 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<Guid>("TeacherId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 
                     b.HasIndex("GroupsId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("Schedules");
                 });
@@ -489,13 +489,17 @@ namespace Cabinet_Prototype.Migrations
                         .WithMany("Schedules")
                         .HasForeignKey("GroupsId");
 
-                    b.HasOne("Cabinet_Prototype.Models.User", null)
+                    b.HasOne("Cabinet_Prototype.Models.User", "Teacher")
                         .WithMany("Schedules")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 
                     b.Navigation("Groups");
+
+                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
