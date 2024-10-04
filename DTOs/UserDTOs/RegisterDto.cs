@@ -1,41 +1,38 @@
 ﻿using Cabinet_Prototype.Enums;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cabinet_Prototype.Models
+namespace Cabinet_Prototype.DTOs.UserDTOs
 {
-    public class UserRequests
+    public class RegisterDto
     {
-        public Guid Id { get; set; }
-
         public string FirstName { get; set; } = string.Empty;
 
         public string LastName { get; set; } = string.Empty;
-        
+
         public DateTime BirthDate { get; set; }
 
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
 
         [Phone]
+        [MaxLength(13)]
         public string PhoneNumber { get; set; } = string.Empty;
+
+        public UserType UserType { get; set; }
 
         public FacultyType StudentFaculty { get; set; }
 
+        //check for the direction in the service, must be in the faculty
         public string StudentDirection { get; set; } = string.Empty;
 
-        public string StudentGroup {  get; set; } = string.Empty;
+        //check for the group in the service, must be in the direction
+        public string StudentGroup { get; set; } = string.Empty;
 
+        //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;
         // public ImageModel? Image { get; set; }
         //public string Faculty {  get; set; } = string.Empty;
 
-        public bool isApproved { get; set; }
-
-        //public Guid GroupId { get; set; }
-
-        public UserType UserType { get; set; }
+        
     }
-    /***
-     * in the service i have to create a function that retrieve faculties, direction and group***/
 }

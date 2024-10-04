@@ -11,5 +11,7 @@
         public ICollection<Schedule>? Schedules { get; set; }
 
         public ICollection<User>? StudentGroup { get; set; }
+
+        //public ICollection<UserRequests>? UserRequests { get; set; }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cabinet_Prototype.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240930090921_ThirdTestRunForCabinet")]
-    partial class ThirdTestRunForCabinet
+    [Migration("20241004071801_firstUpdatedMigration")]
+    partial class firstUpdatedMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -131,6 +131,9 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<Guid>("StudentId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("TeacherId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -140,7 +143,7 @@ namespace Cabinet_Prototype.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Result");
+                    b.ToTable("Results");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Role", b =>
@@ -184,7 +187,7 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<DateTime>("ClassTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CourseId")
+                    b.Property<Guid?>("CourseId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Format")
@@ -197,11 +200,19 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("TeacherId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 
                     b.HasIndex("GroupsId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Schedules");
                 });
@@ -236,9 +247,6 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<string>("GradeNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("GroupId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -278,8 +286,6 @@ namespace Cabinet_Prototype.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GroupId");
-
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -308,11 +314,10 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("GroupId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -323,7 +328,12 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<int>("UserType")
                         .HasColumnType("int");
 
+                    b.Property<bool>("isApproved")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
 
                     b.ToTable("UserRequests");
                 });
@@ -475,23 +485,25 @@ namespace Cabinet_Prototype.Migrations
                 {
                     b.HasOne("Cabinet_Prototype.Models.Course", "Course")
                         .WithMany("Schedules")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourseId");
 
                     b.HasOne("Cabinet_Prototype.Models.Group", "Groups")
                         .WithMany("Schedules")
                         .HasForeignKey("GroupsId");
+
+                    b.HasOne("Cabinet_Prototype.Models.User", null)
+                        .WithMany("Schedules")
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Course");
 
                     b.Navigation("Groups");
                 });
 
-            modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
+            modelBuilder.Entity("Cabinet_Prototype.Models.UserRequests", b =>
                 {
                     b.HasOne("Cabinet_Prototype.Models.Group", null)
-                        .WithMany("StudentGroup")
+                        .WithMany("UserRequests")
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -569,12 +581,14 @@ namespace Cabinet_Prototype.Migrations
                 {
                     b.Navigation("Schedules");
 
-                    b.Navigation("StudentGroup");
+                    b.Navigation("UserRequests");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("Schedules");
 
                     b.Navigation("StudentResults");
                 });

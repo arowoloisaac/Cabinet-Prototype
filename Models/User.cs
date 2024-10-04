@@ -24,7 +24,9 @@ namespace Cabinet_Prototype.Models
 
         public ICollection<Schedule>? Schedules { get; set; }
 
-        public Guid GroupId { get; set; }
+        public Group? StudentGroupId { get; set; }
+
+        public Faculty? StudentFacultyId { get; set; }
     }
 
 
