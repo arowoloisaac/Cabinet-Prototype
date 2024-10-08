@@ -9,6 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Cabinet_Prototype.Services.Initialization;
+using Cabinet_Prototype.Services.SharedService;
+using Cabinet_Prototype.Services.TokenService;
+using Microsoft.OpenApi.Models;
+using Cabinet_Prototype.Services.AdminService;
 
 namespace Cabinet_Prototype
 {
@@ -23,13 +28,43 @@ namespace Cabinet_Prototype
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen( option =>
+            {
+                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+                option.EnableAnnotations();
+                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter a valid token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "Bearer"
+                });
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+                });
+            });
 
             builder.Services
                 .AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ISharedService, SharedService>();
+            builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
 
 
             builder.Services.AddIdentity<User, Role>( options =>
@@ -105,9 +140,12 @@ namespace Cabinet_Prototype
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
-
+            await app.ConfigureRole();
+            await app.ConfigureAdmin();
+            
             app.MapControllers();
 
             app.Run();

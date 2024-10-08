@@ -6,6 +6,10 @@ namespace Cabinet_Prototype.Models
 {
     public class User : IdentityUser<Guid>
     {
+        public string FirstName { get; set; } = string.Empty;
+
+        public string LastName { get; set; } = string.Empty;
+
         public DateTime BirthDate { get; set; }
 
         [Required]
@@ -15,6 +19,8 @@ namespace Cabinet_Prototype.Models
 
         //this serves as the avatar
         //public ImageModel? Image { get; set; }
+
+        public string? Password { get; set; }
 
         public string GradeNumber { get; set; } = string.Empty;
 
