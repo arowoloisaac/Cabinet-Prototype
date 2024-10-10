@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\services\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\services\\adminservice\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\adminservice\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\services\\initialization\\passwordgenerator\\passwordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\passwordgenerator\\passwordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\services\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\services\\initialization\\configuser\\userpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -274,7 +274,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
@@ -332,36 +332,6 @@
               "Name": "ST:2087539004:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TokenResonse.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\TokenResonse.cs",
-              "RelativeDocumentMoniker": "Models\\TokenResonse.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\TokenResonse.cs",
-              "RelativeToolTip": "Models\\TokenResonse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:59:32.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPasswordGen.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
-              "RelativeDocumentMoniker": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
-              "RelativeToolTip": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T06:06:15.138Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
@@ -376,13 +346,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PasswordGen.cs",
               "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
               "RelativeDocumentMoniker": "Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
               "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
               "RelativeToolTip": "Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAgwCYAAAAIAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T05:49:39.716Z",
               "EditorCaption": ""
@@ -402,16 +372,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminService.cs",
               "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\AdminService.cs",
               "RelativeDocumentMoniker": "Services\\AdminService\\AdminService.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\AdminService.cs*",
-              "RelativeToolTip": "Services\\AdminService\\AdminService.cs*",
-              "ViewState": "AQIAACYAAAAAAAAAAAAgwDAAAAAyAAAA",
+              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\AdminService.cs",
+              "RelativeToolTip": "Services\\AdminService\\AdminService.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T07:46:35.314Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Services\\AdminService\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\IAdminService.cs",
+              "RelativeToolTip": "Services\\AdminService\\IAdminService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T07:46:47.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPasswordGen.cs",
+              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "RelativeDocumentMoniker": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "RelativeToolTip": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T06:06:15.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TokenResonse.cs",
+              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\TokenResonse.cs",
+              "RelativeDocumentMoniker": "Models\\TokenResonse.cs",
+              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\TokenResonse.cs",
+              "RelativeToolTip": "Models\\TokenResonse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T14:59:32.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -437,19 +450,6 @@
               "ViewState": "AQIAACUAAAAAAAAAAAAAADEAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T15:26:38.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\IAdminService.cs",
-              "RelativeDocumentMoniker": "Services\\AdminService\\IAdminService.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Services\\AdminService\\IAdminService.cs",
-              "RelativeToolTip": "Services\\AdminService\\IAdminService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T07:46:47.755Z",
               "EditorCaption": ""
             },
             {
