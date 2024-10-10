@@ -4,12 +4,14 @@
     {
         public Guid Id { get; set; }
 
-        public string GroupNumber { get; set; } = string.Empty;
+        public ulong GroupNumber { get; set; }
 
         public Guid DirectionId { get; set; }
 
         public ICollection<Schedule>? Schedules { get; set; }
 
         public ICollection<User>? StudentGroup { get; set; }
+
+        //public ICollection<UserRequests>? UserRequests { get; set; }
     }
 }

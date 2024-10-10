@@ -10,5 +10,7 @@
         public Guid FacultyId { get; set; }
 
         public ICollection<Group>? Groups { get; set; }
+
+        public ICollection<User>? Users { get; set; }
     }
 }

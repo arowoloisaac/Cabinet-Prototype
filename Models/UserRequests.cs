@@ -20,10 +20,22 @@ namespace Cabinet_Prototype.Models
         [Phone]
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public string Password { get; set; } = string.Empty;
+        public FacultyType StudentFaculty { get; set; }
 
-       // public ImageModel? Image { get; set; }
+        public string StudentDirection { get; set; } = string.Empty;
+
+        public ulong StudentGroupNumber {  get; set; }
+
+        public string StudentGrade { get; set; } = string.Empty;
+        // public ImageModel? Image { get; set; }
+        //public string Faculty {  get; set; } = string.Empty;
+
+        public bool isApproved { get; set; } = false;
+
+        //public Guid GroupId { get; set; }
 
         public UserType UserType { get; set; }
     }
+    /***
+     * in the service i have to create a function that retrieve faculties, direction and group***/
 }

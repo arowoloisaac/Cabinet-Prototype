@@ -102,9 +102,8 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<Guid>("DirectionId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("GroupNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("GroupNumber")
+                        .HasColumnType("decimal(20,0)");
 
                     b.HasKey("Id");
 
@@ -241,12 +240,17 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GradeNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("GroupId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -262,6 +266,9 @@ namespace Cabinet_Prototype.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -273,6 +280,15 @@ namespace Cabinet_Prototype.Migrations
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("StudentDirectionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("StudentFacultyIdId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("StudentGroupIdId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
@@ -286,8 +302,6 @@ namespace Cabinet_Prototype.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GroupId");
-
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -295,6 +309,12 @@ namespace Cabinet_Prototype.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("StudentDirectionId");
+
+                    b.HasIndex("StudentFacultyIdId");
+
+                    b.HasIndex("StudentGroupIdId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -320,16 +340,29 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("StudentDirection")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StudentFaculty")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentGrade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("StudentGroupNumber")
+                        .HasColumnType("decimal(20,0)");
+
                     b.Property<int>("UserType")
                         .HasColumnType("int");
+
+                    b.Property<bool>("isApproved")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -500,11 +533,23 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
                 {
-                    b.HasOne("Cabinet_Prototype.Models.Group", null)
+                    b.HasOne("Cabinet_Prototype.Models.Direction", "StudentDirection")
+                        .WithMany("Users")
+                        .HasForeignKey("StudentDirectionId");
+
+                    b.HasOne("Cabinet_Prototype.Models.Faculty", "StudentFacultyId")
+                        .WithMany("StudentFaculty")
+                        .HasForeignKey("StudentFacultyIdId");
+
+                    b.HasOne("Cabinet_Prototype.Models.Group", "StudentGroupId")
                         .WithMany("StudentGroup")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentGroupIdId");
+
+                    b.Navigation("StudentDirection");
+
+                    b.Navigation("StudentFacultyId");
+
+                    b.Navigation("StudentGroupId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -568,11 +613,15 @@ namespace Cabinet_Prototype.Migrations
             modelBuilder.Entity("Cabinet_Prototype.Models.Direction", b =>
                 {
                     b.Navigation("Groups");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Faculty", b =>
                 {
                     b.Navigation("Directions");
+
+                    b.Navigation("StudentFaculty");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Group", b =>
