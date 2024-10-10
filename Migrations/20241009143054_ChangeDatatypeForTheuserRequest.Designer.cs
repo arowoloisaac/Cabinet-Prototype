@@ -4,6 +4,7 @@ using Cabinet_Prototype.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cabinet_Prototype.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241009143054_ChangeDatatypeForTheuserRequest")]
+    partial class ChangeDatatypeForTheuserRequest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -281,9 +284,6 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("StudentDirectionId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid?>("StudentFacultyIdId")
                         .HasColumnType("uniqueidentifier");
 
@@ -309,8 +309,6 @@ namespace Cabinet_Prototype.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.HasIndex("StudentDirectionId");
 
                     b.HasIndex("StudentFacultyIdId");
 
@@ -533,10 +531,6 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
                 {
-                    b.HasOne("Cabinet_Prototype.Models.Direction", "StudentDirection")
-                        .WithMany("Users")
-                        .HasForeignKey("StudentDirectionId");
-
                     b.HasOne("Cabinet_Prototype.Models.Faculty", "StudentFacultyId")
                         .WithMany("StudentFaculty")
                         .HasForeignKey("StudentFacultyIdId");
@@ -544,8 +538,6 @@ namespace Cabinet_Prototype.Migrations
                     b.HasOne("Cabinet_Prototype.Models.Group", "StudentGroupId")
                         .WithMany("StudentGroup")
                         .HasForeignKey("StudentGroupIdId");
-
-                    b.Navigation("StudentDirection");
 
                     b.Navigation("StudentFacultyId");
 
@@ -613,8 +605,6 @@ namespace Cabinet_Prototype.Migrations
             modelBuilder.Entity("Cabinet_Prototype.Models.Direction", b =>
                 {
                     b.Navigation("Groups");
-
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Faculty", b =>

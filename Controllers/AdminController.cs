@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
 namespace Cabinet_Prototype.Controllers
@@ -42,7 +43,20 @@ namespace Cabinet_Prototype.Controllers
             { 
                 return BadRequest();
             }
-            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("add-user")]
+        public async Task<IActionResult> AddUser([Required] Guid requestId)
+        {
+            try
+            {
+                return Ok(await _adminService.AddUser(requestId));
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Cabinet_Prototype.Models
 
         public string StudentDirection { get; set; } = string.Empty;
 
-        public string StudentGroup {  get; set; } = string.Empty;
+        public ulong StudentGroupNumber {  get; set; }
 
         public string StudentGrade { get; set; } = string.Empty;
         // public ImageModel? Image { get; set; }

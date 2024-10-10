@@ -26,7 +26,7 @@ namespace Cabinet_Prototype.DTOs.UserDTOs
         public string StudentDirection { get; set; } = string.Empty;
 
         //check for the group in the service, must be in the direction
-        public string StudentGroup { get; set; } = string.Empty;
+        public ulong StudentGroup { get; set; } 
 
         //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;

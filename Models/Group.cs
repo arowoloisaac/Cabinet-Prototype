@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
 
-        public string GroupNumber { get; set; } = string.Empty;
+        public ulong GroupNumber { get; set; }
 
         public Guid DirectionId { get; set; }
 

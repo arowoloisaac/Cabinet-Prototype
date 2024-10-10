@@ -6,6 +6,6 @@ namespace Cabinet_Prototype.Enums
     public enum UserType
     {
         Student,
-        Teeacher
+        Teacher
     }
 }

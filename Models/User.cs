@@ -32,6 +32,8 @@ namespace Cabinet_Prototype.Models
 
         public Group? StudentGroupId { get; set; }
 
+        public Direction? StudentDirection { get; set; }
+
         public Faculty? StudentFacultyId { get; set; }
     }
 

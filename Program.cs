@@ -14,6 +14,8 @@ using Cabinet_Prototype.Services.SharedService;
 using Cabinet_Prototype.Services.TokenService;
 using Microsoft.OpenApi.Models;
 using Cabinet_Prototype.Services.AdminService;
+using Cabinet_Prototype.Services.Initialization.ConfigUser;
+using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
 
 namespace Cabinet_Prototype
 {
@@ -61,10 +63,12 @@ namespace Cabinet_Prototype
                 .AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
+            builder.Services.AddScoped<IUserPermission, UserPermission>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ISharedService, SharedService>();
             builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
             builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IPasswordGen, PasswordGen>();
 
 
             builder.Services.AddIdentity<User, Role>( options =>

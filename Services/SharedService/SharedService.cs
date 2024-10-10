@@ -42,6 +42,24 @@ namespace Cabinet_Prototype.Services.SharedService
         }
 
 
+        public async Task<GetProfileDto> UserProfile(string userId)
+        {
+            var findUser = await _userManager.FindByIdAsync(userId);
+
+            if (findUser == null)
+            {
+                throw new Exception("yo, you don't even have a profile");
+            }
+
+            else
+            {
+                var user = new GetProfileDto { FirstName = findUser.FirstName, LastName = findUser.LastName, Email = findUser.Email};
+
+                return user;
+            }
+        }
+
+
         private async Task<User> ValidateUser(LoginDto request)
         {
             var identifyUser = await _userManager.FindByEmailAsync(request.Email);

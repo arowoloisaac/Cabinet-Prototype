@@ -14,6 +14,8 @@ namespace Cabinet_Prototype.Services.AdminService
          * crud user generally***/
         Task<List<UserRequestDto>> GetRequests(string adminId);
 
-        Task<Message> AddUser(UserRequestDto userRequestDto);
+        Task<Message> AddUser(Guid RequestId);
+
+        Task<Message> AddUserToRole(Guid UserId);
     }
 }

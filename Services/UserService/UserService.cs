@@ -34,7 +34,7 @@ namespace Cabinet_Prototype.Services.UserService
                 LastName = dto.LastName,
                 Id = Guid.NewGuid(),
                 StudentFaculty = dto.StudentFaculty,
-                StudentGroup = dto.StudentGroup,
+                StudentGroupNumber = dto.StudentGroup,
                 StudentGrade = dto.StudentGrade,
                 UserType = dto.UserType,
                 StudentDirection = dto.StudentDirection,
