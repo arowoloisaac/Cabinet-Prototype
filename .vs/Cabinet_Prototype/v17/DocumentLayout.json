@@ -1,110 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\",
+  "WorkspaceRootPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\facultyservice\\facultyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\facultyservice\\facultyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\facultyservice\\ifacultyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\facultyservice\\ifacultyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\initialization\\identityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\identityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\adminservice\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\adminservice\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\configurations\\applicationrolename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:configurations\\applicationrolename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\dtos\\facultydtos\\facultydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\facultydtos\\facultydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\dtos\\facultydtos\\facultylistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\facultydtos\\facultylistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\dtos\\userdtos\\getprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\userdtos\\getprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090837_ThirdTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930090837_ThirdTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\initialization\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090704_FourthTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930090704_FourthTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\controllers\\sharedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:controllers\\sharedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090540_FourthTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930090540_FourthTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090458_ThirdTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930090458_ThirdTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090316_SecondTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930090316_SecondTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082804_FirstTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930082804_FirstTestRunForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082610_thirdUpdatedForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930082610_thirdUpdatedForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082502_secomdUpdatedForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930082502_secomdUpdatedForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\enums\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\enums\\classformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\classformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930073233_updatedTableForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240930073233_updatedTableForCabinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\cabinet_prototype.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:cabinet_prototype.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\initialization\\passwordgenerator\\passwordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\passwordgenerator\\passwordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\arowo\\source\\repos\\cabinet_prototype\\cabinet_prototype.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:cabinet_prototype.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype1\\services\\initialization\\passwordgenerator\\ipasswordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\passwordgenerator\\ipasswordgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,46 +86,19 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Course.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "Models\\Course.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Course.cs",
-              "RelativeToolTip": "Models\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:09:13.559Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:08:05.767Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
               "$type": "Bookmark",
@@ -172,296 +117,251 @@
               "Name": "ST:2087539004:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacultyType.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Enums\\FacultyType.cs",
+              "RelativeDocumentMoniker": "Enums\\FacultyType.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Enums\\FacultyType.cs",
+              "RelativeToolTip": "Enums\\FacultyType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T16:38:57.98Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Result.cs",
-              "RelativeDocumentMoniker": "Models\\Result.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Result.cs",
-              "RelativeToolTip": "Models\\Result.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:33:02.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Schedule.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Schedule.cs",
-              "RelativeDocumentMoniker": "Models\\Schedule.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Schedule.cs",
-              "RelativeToolTip": "Models\\Schedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:27:19.62Z"
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-11T15:37:16.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApplicationRoleName.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Configurations\\ApplicationRoleName.cs",
-              "RelativeDocumentMoniker": "Configurations\\ApplicationRoleName.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Configurations\\ApplicationRoleName.cs",
-              "RelativeToolTip": "Configurations\\ApplicationRoleName.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Title": "FacultyController.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\FacultyController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FacultyController.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\FacultyController.cs",
+              "RelativeToolTip": "Controllers\\FacultyController.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAkwIoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:35:12.58Z"
+              "WhenOpened": "2024-10-11T15:22:40.98Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "Models\\Group.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Group.cs",
-              "RelativeToolTip": "Models\\Group.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "DocumentIndex": 6,
+              "Title": "FacultyDTO.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\FacultyDTOs\\FacultyDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\FacultyDTOs\\FacultyDTO.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\FacultyDTOs\\FacultyDTO.cs",
+              "RelativeToolTip": "DTOs\\FacultyDTOs\\FacultyDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T16:40:25.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Direction.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Direction.cs",
-              "RelativeDocumentMoniker": "Models\\Direction.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Direction.cs",
-              "RelativeToolTip": "Models\\Direction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T02:01:36.52Z"
+              "WhenOpened": "2024-10-11T15:15:05.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Faculty.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Faculty.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Models\\Faculty.cs",
               "RelativeDocumentMoniker": "Models\\Faculty.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Faculty.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Models\\Faculty.cs",
               "RelativeToolTip": "Models\\Faculty.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T16:43:43.078Z"
+              "WhenOpened": "2024-10-11T13:32:22.639Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRequests.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\UserRequests.cs",
-              "RelativeDocumentMoniker": "Models\\UserRequests.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\UserRequests.cs",
-              "RelativeToolTip": "Models\\UserRequests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "FacultyService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\FacultyService\\FacultyService.cs",
+              "RelativeDocumentMoniker": "Services\\FacultyService\\FacultyService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\FacultyService\\FacultyService.cs*",
+              "RelativeToolTip": "Services\\FacultyService\\FacultyService.cs*",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAIwDcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:58:13.829Z"
+              "WhenOpened": "2024-10-11T11:35:28.722Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Models\\Role.cs",
-              "RelativeToolTip": "Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "IFacultyService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\FacultyService\\IFacultyService.cs",
+              "RelativeDocumentMoniker": "Services\\FacultyService\\IFacultyService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\FacultyService\\IFacultyService.cs",
+              "RelativeToolTip": "Services\\FacultyService\\IFacultyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:11:11.083Z"
+              "WhenOpened": "2024-10-11T11:35:17.412Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAyAAAA",
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\AdminService\\AdminService.cs",
+              "RelativeDocumentMoniker": "Services\\AdminService\\AdminService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\AdminService\\AdminService.cs",
+              "RelativeToolTip": "Services\\AdminService\\AdminService.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAkwGgAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T16:32:09.583Z"
+              "WhenOpened": "2024-10-11T11:35:31.891Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-29T02:03:27.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20240930090837_ThirdTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090837_ThirdTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930090837_ThirdTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090837_ThirdTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930090837_ThirdTestRunForCabinet.cs",
+              "DocumentIndex": 2,
+              "Title": "IdentityConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\IdentityConfiguration.cs",
+              "RelativeDocumentMoniker": "Services\\Initialization\\IdentityConfiguration.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\IdentityConfiguration.cs",
+              "RelativeToolTip": "Services\\Initialization\\IdentityConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:08:37.871Z"
+              "WhenOpened": "2024-10-11T15:37:25.712Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20240930090704_FourthTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090704_FourthTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930090704_FourthTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090704_FourthTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930090704_FourthTestRunForCabinet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 9,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:07:04.612Z"
+              "WhenOpened": "2024-10-11T15:37:39.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20240930090540_FourthTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090540_FourthTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930090540_FourthTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090540_FourthTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930090540_FourthTestRunForCabinet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "FacultyListDTO.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\FacultyDTOs\\FacultyListDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\FacultyDTOs\\FacultyListDTO.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\FacultyDTOs\\FacultyListDTO.cs",
+              "RelativeToolTip": "DTOs\\FacultyDTOs\\FacultyListDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:05:41.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20240930090458_ThirdTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090458_ThirdTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930090458_ThirdTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090458_ThirdTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930090458_ThirdTestRunForCabinet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:04:58.712Z"
+              "WhenOpened": "2024-10-11T15:38:33.78Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "20240930090316_SecondTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090316_SecondTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930090316_SecondTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930090316_SecondTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930090316_SecondTestRunForCabinet.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAQwEgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:21:57.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Models\\Course.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Models\\Course.cs",
+              "RelativeToolTip": "Models\\Course.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T09:59:28.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\UserDTOs\\GetProfileDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDTOs\\GetProfileDto.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\DTOs\\UserDTOs\\GetProfileDto.cs",
+              "RelativeToolTip": "DTOs\\UserDTOs\\GetProfileDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:15:13.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:03:16.329Z"
+              "WhenOpened": "2024-10-11T15:23:30.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RoleConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\RoleConfiguration.cs",
+              "RelativeDocumentMoniker": "Services\\Initialization\\RoleConfiguration.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\RoleConfiguration.cs",
+              "RelativeToolTip": "Services\\Initialization\\RoleConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:29:13.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SharedController.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\SharedController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SharedController.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Controllers\\SharedController.cs",
+              "RelativeToolTip": "Controllers\\SharedController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T09:58:57.668Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "20240930082804_FirstTestRunForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082804_FirstTestRunForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930082804_FirstTestRunForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082804_FirstTestRunForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930082804_FirstTestRunForCabinet.cs",
+              "Title": "PasswordGen.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
+              "RelativeDocumentMoniker": "Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
+              "RelativeToolTip": "Services\\Initialization\\PasswordGenerator\\PasswordGen.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:28:04.889Z"
+              "WhenOpened": "2024-10-11T13:29:15.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "20240930082610_thirdUpdatedForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082610_thirdUpdatedForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930082610_thirdUpdatedForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082610_thirdUpdatedForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930082610_thirdUpdatedForCabinet.cs",
+              "Title": "IPasswordGen.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "RelativeDocumentMoniker": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
+              "RelativeToolTip": "Services\\Initialization\\PasswordGenerator\\IPasswordGen.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:26:10.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20240930082502_secomdUpdatedForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082502_secomdUpdatedForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930082502_secomdUpdatedForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930082502_secomdUpdatedForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930082502_secomdUpdatedForCabinet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:25:02.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ClassFormat.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Enums\\ClassFormat.cs",
-              "RelativeDocumentMoniker": "Enums\\ClassFormat.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Enums\\ClassFormat.cs",
-              "RelativeToolTip": "Enums\\ClassFormat.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:19:20.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "20240930073233_updatedTableForCabinet.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930073233_updatedTableForCabinet.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240930073233_updatedTableForCabinet.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Migrations\\20240930073233_updatedTableForCabinet.cs",
-              "RelativeToolTip": "Migrations\\20240930073233_updatedTableForCabinet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:32:34.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T06:02:33.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserType.cs",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Enums\\UserType.cs",
-              "RelativeDocumentMoniker": "Enums\\UserType.cs",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Enums\\UserType.cs",
-              "RelativeToolTip": "Enums\\UserType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T16:58:31.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Cabinet_Prototype.http",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.http",
-              "RelativeDocumentMoniker": "Cabinet_Prototype.http",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.http",
-              "RelativeToolTip": "Cabinet_Prototype.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-09-30T06:04:27.349Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Cabinet_Prototype.csproj",
-              "DocumentMoniker": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj",
-              "RelativeDocumentMoniker": "Cabinet_Prototype.csproj",
-              "ToolTip": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj",
-              "RelativeToolTip": "Cabinet_Prototype.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-28T09:04:38.749Z"
+              "WhenOpened": "2024-10-11T13:29:14.015Z",
+              "EditorCaption": ""
             }
           ]
         },

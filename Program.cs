@@ -16,6 +16,7 @@ using Microsoft.OpenApi.Models;
 using Cabinet_Prototype.Services.AdminService;
 using Cabinet_Prototype.Services.Initialization.ConfigUser;
 using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
+using Cabinet_Prototype.Services.FacultyService;
 
 namespace Cabinet_Prototype
 {
@@ -69,6 +70,7 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
             builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IPasswordGen, PasswordGen>();
+            builder.Services.AddScoped<IFacultyService, FacultyService>();
 
 
             builder.Services.AddIdentity<User, Role>( options =>
