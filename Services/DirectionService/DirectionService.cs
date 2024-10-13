@@ -1,6 +1,7 @@
 ﻿using Cabinet_Prototype.Data;
 using Cabinet_Prototype.DTOs.DirectionDTOs;
 using Cabinet_Prototype.DTOs.FacultyDTOs;
+using Cabinet_Prototype.DTOs.GroupDTOs;
 using Cabinet_Prototype.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
@@ -85,13 +86,19 @@ namespace Cabinet_Prototype.Services.DirectionService
                 throw new KeyNotFoundException($"Could not find the direction {DirectionId}");
             }
 
+            var facultyExists = await _dbContext.Faculties.AnyAsync(f => f.Id == model.FacultyId);
+            if (!facultyExists)
+            {
+                throw new KeyNotFoundException($"No faculty found with ID: {model.FacultyId}");
+            }
+
             direction.Name = model.Name;
             direction.FacultyId = model.FacultyId;
 
             _dbContext.Directions.Update(direction);
             await _dbContext.SaveChangesAsync();
 
-            return new Message($"Success change the faculty {direction}");
+            return new Message($"Success change the direction {direction}");
         }
 
         public async Task<Message> DeleteDirectionById(Guid DirectionId)
@@ -99,14 +106,14 @@ namespace Cabinet_Prototype.Services.DirectionService
             var direction = await _dbContext.Directions.FindAsync(DirectionId);
             if (direction == null)
             {
-                throw new KeyNotFoundException($"Could not find the faculty {DirectionId}");
+                throw new KeyNotFoundException($"Could not find the direction {DirectionId}");
             }
 
             _dbContext.Directions.Remove(direction);
 
             await _dbContext.SaveChangesAsync();
 
-            return new Message($"Success delete the faculty {DirectionId}");
+            return new Message($"Success delete the direction {DirectionId}");
         }
     }
 }

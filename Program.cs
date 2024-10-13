@@ -18,6 +18,7 @@ using Cabinet_Prototype.Services.Initialization.ConfigUser;
 using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
 using Cabinet_Prototype.Services.FacultyService;
 using Cabinet_Prototype.Services.DirectionService;
+using Cabinet_Prototype.Services.GroupService;
 
 namespace Cabinet_Prototype
 {
@@ -73,6 +74,7 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<IPasswordGen, PasswordGen>();
             builder.Services.AddScoped<IFacultyService, FacultyService>();
             builder.Services.AddScoped<IDirectionService, DirectionService>();
+            builder.Services.AddScoped<IGroupService, GroupService>();
 
 
 

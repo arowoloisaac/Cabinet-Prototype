@@ -1,5 +1,7 @@
 ﻿using Cabinet_Prototype.Data;
+using Cabinet_Prototype.DTOs.DirectionDTOs;
 using Cabinet_Prototype.DTOs.FacultyDTOs;
+using Cabinet_Prototype.DTOs.GroupDTOs;
 using Cabinet_Prototype.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -93,6 +95,63 @@ namespace Cabinet_Prototype.Services.FacultyService
             await _dbContext.SaveChangesAsync();
 
             return new Message($"Success delete the faculty {facultyId}");
+        }
+
+        public async Task<List<FacultyTotalShowDTO>> ShowALLChainsWithFacultyList()
+        {
+            var faculties = await _dbContext.Faculties
+                .Include(f => f.Directions)
+                    .ThenInclude(d => d.Groups)
+                .Select(f => new FacultyTotalShowDTO
+                {
+                    FacultyId = f.Id,
+                    Name = f.Name,
+                    BuildingNumber = f.BuildingNumber,
+                    Directions = f.Directions.Select(d => new DirectionTotalListDTO
+                    {
+                        DirectionId = d.Id,
+                        Name = d.Name,
+                        Groups = d.Groups.Select(g => new GroupListDTO
+                        {
+                            GroupId = g.Id,
+                            GroupNumber = g.GroupNumber
+                        }).ToList()
+                    }).ToList()
+                }).ToListAsync();
+
+            return faculties;
+        }
+
+        public async Task<FacultyTotalShowDTO> ShowALLChainsWithFacultyListById(Guid FacultyId)
+        {
+            var faculty = await _dbContext.Faculties
+                .Where(f => f.Id == FacultyId) 
+                .Include(f => f.Directions)
+                    .ThenInclude(d => d.Groups) // Include groups under directions
+                .Select(f => new FacultyTotalShowDTO
+                {
+                    FacultyId = f.Id,
+                    Name = f.Name,
+                    BuildingNumber = f.BuildingNumber,
+                    Directions = f.Directions.Select(d => new DirectionTotalListDTO
+                    {
+                        DirectionId = d.Id,
+                        Name = d.Name,
+                        Groups = d.Groups.Select(g => new GroupListDTO
+                        {
+                            GroupId = g.Id,
+                            GroupNumber = g.GroupNumber
+                        }).ToList()
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync(); // Retrieve the first or default faculty
+
+            if (faculty == null)
+            {
+                throw new KeyNotFoundException($"No faculty found with ID: {FacultyId}");
+            }
+
+            return faculty;
         }
     }
 }

@@ -1,31 +1,33 @@
-﻿using Cabinet_Prototype.DTOs.FacultyDTOs;
-using Cabinet_Prototype.Services.FacultyService;
+﻿using Cabinet_Prototype.DTOs.DirectionDTOs;
+using Cabinet_Prototype.DTOs.FacultyDTOs;
+using Cabinet_Prototype.DTOs.GroupDTOs;
+using Cabinet_Prototype.Services.GroupService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace Cabinet_Prototype.Controllers
 {
-    [Route("api/faculty")]
+    [Route("api/group")]
     [ApiController]
-    public class FacultyController:ControllerBase
+    public class GroupController:ControllerBase
     {
-        private readonly IFacultyService _facultyService;
+        private readonly IGroupService _groupService;
 
-        public FacultyController (IFacultyService facultyService)
+        public GroupController (IGroupService groupService)
         {
-            _facultyService = facultyService;
+            _groupService = groupService;
         }
 
         /// <summary>
-        /// Create faculty
+        /// add group
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddFaculty(FacultyDTO model)
+        public async Task<IActionResult> AddGroup(GroupDTO model)
         {
             try
             {
@@ -36,7 +38,7 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-                var res = await _facultyService.AddFaculty(model);
+                var res = await _groupService.AddGroup(model);
 
                 return Ok(res);
             }
@@ -48,14 +50,14 @@ namespace Cabinet_Prototype.Controllers
 
 
         /// <summary>
-        /// Get faculty list
+        /// list group by direction id
         /// </summary>
-        /// <param name="model"></param>
+        /// <param name="DirectionId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("")]
+        [Route("list/{DirectionId}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetFacultyList()
+        public async Task<IActionResult> ShowGroupList(Guid DirectionId)
         {
             try
             {
@@ -66,7 +68,7 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-                var res = await _facultyService.ShowFacultyList();
+                var res = await _groupService.ShowGroupList(DirectionId);
 
                 return Ok(res);
             }
@@ -76,15 +78,16 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
+
         /// <summary>
-        /// Get faculty by id
+        /// show group by id
         /// </summary>
-        /// <param name="FacultyId"></param>
+        /// <param name="GroupId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{FacultyId}")]
+        [Route("{GroupId}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetFacultyById(Guid FacultyId)
+        public async Task<IActionResult> ShowGroupById(Guid GroupId)
         {
             try
             {
@@ -95,7 +98,7 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-                var res = await _facultyService.ShowFacultyById(FacultyId);
+                var res = await _groupService.ShowGroupById(GroupId);
 
                 return Ok(res);
             }
@@ -106,15 +109,15 @@ namespace Cabinet_Prototype.Controllers
         }
 
         /// <summary>
-        /// Edit faculty
+        /// change group by id
         /// </summary>
-        /// <param name="FacultyId"></param>
+        /// <param name="GroupId"></param>
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPut]
-        [Route("{FacultyId}")]
+        [Route("{GroupId}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> ChangeFacultyById(Guid FacultyId, FacultyDTO model)
+        public async Task<IActionResult> ChangeGroupById(Guid GroupId, GroupDTO model)
         {
             try
             {
@@ -125,7 +128,7 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-                var res = await _facultyService.ChangeFacultyById(FacultyId, model);
+                var res = await _groupService.EditGroupById(GroupId, model);
 
                 return Ok(res);
             }
@@ -135,15 +138,16 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
+
         /// <summary>
-        /// Delete faculty
+        /// delete group by id
         /// </summary>
-        /// <param name="FacultyId"></param>
+        /// <param name="GroupId"></param>
         /// <returns></returns>
         [HttpDelete]
-        [Route("{FacultyId}")]
+        [Route("{GroupId}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteFacultyById(Guid FacultyId)
+        public async Task<IActionResult> DeleteGroupById(Guid GroupId)
         {
             try
             {
@@ -154,7 +158,7 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-                var res = await _facultyService.DeleteFacultyById(FacultyId);
+                var res = await _groupService.DeleteGroupById(GroupId);
 
                 return Ok(res);
             }
@@ -163,60 +167,5 @@ namespace Cabinet_Prototype.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
-        /// <summary>
-        /// get all chain about faculty
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("chain")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> ShowALLChainsWithFacultyList()
-        {
-            try
-            {
-                var claim = User.FindFirst(ClaimTypes.Authentication);
-
-                if (claim == null)
-                {
-                    return StatusCode(401, "please login first");
-                }
-
-                var res = await _facultyService.ShowALLChainsWithFacultyList();
-
-                return Ok(res);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-        }
-
-
-        [HttpGet]
-        [Route("chain/{FacultyId}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> ShowALLChainsWithFacultyListById(Guid FacultyId)
-        {
-            try
-            {
-                var claim = User.FindFirst(ClaimTypes.Authentication);
-
-                if (claim == null)
-                {
-                    return StatusCode(401, "please login first");
-                }
-
-                var res = await _facultyService.ShowALLChainsWithFacultyListById(FacultyId);
-
-                return Ok(res);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-        }
-
-
     }
 }

@@ -12,6 +12,9 @@
 
         public ICollection<User>? StudentGroup { get; set; }
 
+        public Direction Direction { get; set; }
+
         //public ICollection<UserRequests>? UserRequests { get; set; }
+
     }
 }

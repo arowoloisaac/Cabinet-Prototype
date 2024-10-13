@@ -10,6 +10,8 @@ namespace Cabinet_Prototype.Services.FacultyService
         Task<FacultyDTO> ShowFacultyById(Guid FacultyId);
         Task<Message> ChangeFacultyById(Guid facultyId, FacultyDTO model);
         Task<Message> DeleteFacultyById(Guid facultyId);
+        Task<List<FacultyTotalShowDTO>> ShowALLChainsWithFacultyList();
+        Task<FacultyTotalShowDTO> ShowALLChainsWithFacultyListById(Guid FacultyId);
 
     }
 }
