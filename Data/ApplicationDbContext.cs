@@ -1,6 +1,7 @@
 ﻿using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Cabinet_Prototype.Data
 {
@@ -28,9 +29,20 @@ namespace Cabinet_Prototype.Data
 
         public DbSet<Result> Results { get; set; }
 
+        public DbSet<CourseTeacher> CourseTeachers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<CourseTeacher>()
+            .HasKey(ct => ct.Id);
+            
+            builder.Entity<CourseTeacher>()
+            .HasOne<User>() 
+            .WithMany(u => u.CourseTeachers) 
+            .HasForeignKey(ct => ct.TeacherId) 
+            .IsRequired(); 
         }
     }
 }
