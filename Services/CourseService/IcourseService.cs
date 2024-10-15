@@ -1,6 +1,9 @@
-﻿namespace Cabinet_Prototype.Services.CourseService
+﻿using Cabinet_Prototype.DTOs.CourseDTOs;
+
+namespace Cabinet_Prototype.Services.CourseService
 {
-    public class ICourseService
+    public interface ICourseService
     {
+        Task<Guid> AddCourse(CourseDTO model);
     }
 }
