@@ -10,6 +10,7 @@ namespace Cabinet_Prototype.Controllers
 {
     [Route("api/group")]
     [ApiController]
+    [Authorize(Roles ="Admin")]
     public class GroupController:ControllerBase
     {
         private readonly IGroupService _groupService;
@@ -25,8 +26,7 @@ namespace Cabinet_Prototype.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("")]
-        [Authorize(Roles = "Admin")]
+        [Route("add-group")]
         public async Task<IActionResult> AddGroup(GroupDTO model)
         {
             try

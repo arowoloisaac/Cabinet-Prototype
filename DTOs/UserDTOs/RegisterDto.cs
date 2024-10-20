@@ -9,7 +9,7 @@ namespace Cabinet_Prototype.DTOs.UserDTOs
 
         public string LastName { get; set; } = string.Empty;
 
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
@@ -30,6 +30,8 @@ namespace Cabinet_Prototype.DTOs.UserDTOs
 
         //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;
+
+        public IFormFile? ProfilePicture { get; set; }
         // public ImageModel? Image { get; set; }
         //public string Faculty {  get; set; } = string.Empty;
 

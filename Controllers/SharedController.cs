@@ -57,5 +57,28 @@ namespace Cabinet_Prototype.Controllers
             return Ok();
         }
 
+        [HttpPut]
+        [Route("profile")]
+        [Authorize]
+        public async Task<IActionResult> UpdateProfile(UpdateProfileDto profileDto)
+        {
+            try
+            {
+                var getUser = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Authentication);
+
+                if (getUser != null)
+                {
+                    return Ok(await _sharedService.UpdateUserProfile(profileDto, getUser.Value));
+                }
+                else
+                { return BadRequest(); }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

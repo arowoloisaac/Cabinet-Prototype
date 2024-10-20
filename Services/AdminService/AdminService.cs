@@ -30,7 +30,7 @@ namespace Cabinet_Prototype.Services.AdminService
 
         public async Task<Message> AddUser(Guid RequestId)
         {
-            var searchRequest = await _dbContext.UserRequests.FindAsync(RequestId);
+            var searchRequest = await _dbContext.UserRequests.Where(_ => _.Id ==RequestId && !_.isRejected).SingleOrDefaultAsync();
 
             if (searchRequest == null)
             {
@@ -87,6 +87,7 @@ namespace Cabinet_Prototype.Services.AdminService
                     await InitialUserToRole(getCreatedUser);
 
                     searchRequest.isApproved = true;
+                    searchRequest.isAccepted = true;
                 }
 
                 await _dbContext.SaveChangesAsync();
@@ -127,11 +128,113 @@ namespace Cabinet_Prototype.Services.AdminService
             throw new Exception("Can not perform this action");
         }
 
-        public async Task<Message> AddUserToRole(Guid userId)
+        
+        public async Task<Message> DenyUser(Guid requestId)
         {
-            throw new NotImplementedException();
+            //var findRequestId = await _dbContext.UserRequests.FindAsync(requestId);
+            var findRequestId = await _dbContext.UserRequests.Where(_ =>  _.Id == requestId && _.isApproved == false).SingleOrDefaultAsync();
+
+            if (findRequestId != null)
+            {
+                findRequestId.isApproved = false;
+                findRequestId.isAccepted = false;
+                findRequestId.isRejected = true;
+
+                _dbContext.SaveChanges();
+
+                return new Message("User successfully denied");
+            }
+            throw new Exception("Unable to process this function");
         }
 
+
+
+        public async Task<Message> AddUserToRole(Guid userId, UserType role)
+        {
+            //might initialize admin user later on
+
+            var findUser = await _userManager.FindByIdAsync(userId.ToString());
+
+            if (findUser != null)
+            {
+                if (!await _userManager.IsInRoleAsync(findUser, role.ToString()))
+                {
+                    var response = await _userManager.AddToRoleAsync(findUser, role.ToString());
+
+                    if (response.Succeeded)
+                    {
+                        return new Message($"role added for user: {findUser.UserName} with the role: {role}");
+                    }
+                    else
+                    {
+                        return new Message($"Unable to add user: {findUser.UserName} to the role {role}");
+                    }
+                }
+                else
+                {
+                    throw new Exception("User already exist with same role");
+                }
+            }
+            else
+            {
+                throw new Exception("Can't find the user in the database");
+            }
+        }
+
+
+
+        public async Task<Message> RemoveUserFromRole(Guid userId, UserType role)
+        {
+            //might initialize admin user later on
+
+            var findUser = await _userManager.FindByIdAsync(userId.ToString());
+
+            if (findUser != null)
+            {
+                if (!await _userManager.IsInRoleAsync(findUser, role.ToString()))
+                {
+                    return new Message($"user {findUser.Email} does not have this role {role}");
+                }
+                else
+                {
+                    var response = await _userManager.RemoveFromRoleAsync(findUser, role.ToString());
+
+                    if (response.Succeeded)
+                    {
+                        return new Message($"user: {findUser.UserName} has been removed from the role: {role}");
+                    }
+                    else
+                    {
+                        return new Message($"Unable to remove user: {findUser.UserName} to the role {role}");
+                    }
+                }
+            }
+            else
+            {
+                throw new Exception("Can't find the user in the database");
+            }
+        }
+
+
+        public async Task<List<GetUsersDto>> GetAllUsers()
+        {
+            var users = await _userManager.Users.Where(getMails => getMails != null).ToListAsync();
+
+            if (users == null)
+            {
+                return new List<GetUsersDto>();
+            }
+            else
+            {
+                var response = users.Select(users => new GetUsersDto
+                {
+                    userId = users.Id,
+                    Email = users.Email
+                }).ToList();
+
+                return response;
+            }
+        }
 
 
         private async Task<Message> InitialUserToRole(User getCreatedUser)

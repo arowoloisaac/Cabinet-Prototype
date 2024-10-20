@@ -1,4 +1,5 @@
 ﻿using Cabinet_Prototype.DTOs.UserDTOs;
+using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Models;
 
 namespace Cabinet_Prototype.Services.AdminService
@@ -16,6 +17,12 @@ namespace Cabinet_Prototype.Services.AdminService
 
         Task<Message> AddUser(Guid RequestId);
 
-        Task<Message> AddUserToRole(Guid UserId);
+        Task<Message> DenyUser(Guid RequestId);
+
+        Task<Message> AddUserToRole(Guid UserId, UserType role);
+
+        Task<Message> RemoveUserFromRole(Guid UserId, UserType role);
+
+        Task<List<GetUsersDto>> GetAllUsers();    
     }
 }

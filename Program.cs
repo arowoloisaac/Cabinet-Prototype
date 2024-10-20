@@ -30,8 +30,11 @@ namespace Cabinet_Prototype
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //https://github.com/juldhais/DateOnlyWebApiExample/blob/master/Program.cs
+            builder.Services.AddControllers().AddJsonOptions( opt => {
+                opt.JsonSerializerOptions.Converters.Add(new DateonlyConfiguration());
 
-            builder.Services.AddControllers();
+            });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen( option =>
