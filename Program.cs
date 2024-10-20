@@ -16,6 +16,9 @@ using Microsoft.OpenApi.Models;
 using Cabinet_Prototype.Services.AdminService;
 using Cabinet_Prototype.Services.Initialization.ConfigUser;
 using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
+using Cabinet_Prototype.Services.FacultyService;
+using Cabinet_Prototype.Services.DirectionService;
+using Cabinet_Prototype.Services.GroupService;
 
 namespace Cabinet_Prototype
 {
@@ -26,8 +29,11 @@ namespace Cabinet_Prototype
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //https://github.com/juldhais/DateOnlyWebApiExample/blob/master/Program.cs
+            builder.Services.AddControllers().AddJsonOptions( opt => {
+                opt.JsonSerializerOptions.Converters.Add(new DateonlyConfiguration());
 
-            builder.Services.AddControllers();
+            });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen( option =>
@@ -69,6 +75,10 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
             builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IPasswordGen, PasswordGen>();
+            builder.Services.AddScoped<IFacultyService, FacultyService>();
+            builder.Services.AddScoped<IDirectionService, DirectionService>();
+            builder.Services.AddScoped<IGroupService, GroupService>();
+
 
 
             builder.Services.AddIdentity<User, Role>( options =>

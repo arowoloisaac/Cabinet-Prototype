@@ -10,12 +10,14 @@ namespace Cabinet_Prototype.Models
 
         public string LastName { get; set; } = string.Empty;
 
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [Required]
         public UserType UserType { get; set; }
 
         public string Avatar { get; set; } = string.Empty;
+
+        //public byte[] AvatarBytes { get; set; }
 
         //this serves as the avatar
         //public ImageModel? Image { get; set; }

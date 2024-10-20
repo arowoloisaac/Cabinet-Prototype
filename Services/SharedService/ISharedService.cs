@@ -11,5 +11,7 @@ namespace Cabinet_Prototype.Services.SharedService
         //Task<User> AuthentifyUser(string userId, string roles);
 
         Task<GetProfileDto> UserProfile(string Id);
+
+        Task<string> UpdateUserProfile(UpdateProfileDto profileDto, string userId);
     }
 }

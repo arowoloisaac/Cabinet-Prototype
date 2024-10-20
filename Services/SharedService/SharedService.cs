@@ -59,6 +59,38 @@ namespace Cabinet_Prototype.Services.SharedService
             }
         }
 
+        public async Task<string> UpdateUserProfile(UpdateProfileDto updateProfileDto, string userId)
+        {
+            var identifyUser = await _userManager.FindByIdAsync(userId);
+
+            if (identifyUser == null)
+            {
+                throw new Exception("User not found");
+            }
+
+            else
+            {
+                object value;
+                value = updateProfileDto.FirstName == null ? identifyUser.FirstName : identifyUser.FirstName == updateProfileDto.FirstName;
+                //identifyUser.FirstName = updateProfileDto.FirstName;
+                value = updateProfileDto.LastName == null ? identifyUser.LastName : identifyUser.LastName == updateProfileDto.LastName;
+
+                value = updateProfileDto.PhoneNumber == null ? identifyUser.PhoneNumber : identifyUser.PhoneNumber = updateProfileDto.PhoneNumber;
+
+                value = updateProfileDto.BirthDate == null ? identifyUser.BirthDate : identifyUser.BirthDate == updateProfileDto.BirthDate;
+                //identifyUser.BirthDate = updateProfileDto.BirthDate;
+                //identifyUser.Avatar = updateProfileDto.ProfilePicture;
+
+                var updateUser = await _userManager.UpdateAsync(identifyUser);
+
+                if (!updateUser.Succeeded)
+                {
+                    throw new Exception("Unable to save user");
+                }
+                return $"User with email has been saved {identifyUser.Email}";
+            }
+        }
+
 
         private async Task<User> ValidateUser(LoginDto request)
         {

@@ -12,5 +12,7 @@
         public ICollection<Group>? Groups { get; set; }
 
         public ICollection<User>? Users { get; set; }
+
+        public Faculty Faculty { get; set; }
     }
 }

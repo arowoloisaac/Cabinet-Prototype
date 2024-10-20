@@ -226,8 +226,8 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("BirthDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -325,8 +325,8 @@ namespace Cabinet_Prototype.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("BirthDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -358,10 +358,19 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<decimal>("StudentGroupNumber")
                         .HasColumnType("decimal(20,0)");
 
+                    b.Property<byte[]>("UserPicture")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<int>("UserType")
                         .HasColumnType("int");
 
+                    b.Property<bool>("isAccepted")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("isApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isRejected")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -483,20 +492,24 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Direction", b =>
                 {
-                    b.HasOne("Cabinet_Prototype.Models.Faculty", null)
+                    b.HasOne("Cabinet_Prototype.Models.Faculty", "Faculty")
                         .WithMany("Directions")
                         .HasForeignKey("FacultyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Faculty");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Group", b =>
                 {
-                    b.HasOne("Cabinet_Prototype.Models.Direction", null)
+                    b.HasOne("Cabinet_Prototype.Models.Direction", "Direction")
                         .WithMany("Groups")
                         .HasForeignKey("DirectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Direction");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Result", b =>

@@ -1,4 +1,5 @@
 ﻿using Cabinet_Prototype.Configurations;
+using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Services.AdminService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +10,7 @@ using System.Security.Claims;
 
 namespace Cabinet_Prototype.Controllers
 {
-    [Route("api/admin")]
+    [Route("api/")]
     [ApiController]
     [Authorize(Roles =ApplicationRoleName.Admin)]
     public class AdminController : ControllerBase
@@ -45,8 +46,24 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("users")]
+        public async Task<IActionResult> GetUsers()
+        {
+            try
+            {
+                return Ok(await _adminService.GetAllUsers());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
         [HttpPost]
-        [Route("add-user")]
+        [Route("add-user/{requestId}")]
         public async Task<IActionResult> AddUser([Required] Guid requestId)
         {
             try
@@ -56,6 +73,51 @@ namespace Cabinet_Prototype.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+
+
+        [HttpPut]
+        [Route("deny-user/{requestId}")]
+        public async Task<IActionResult> DenyUser([Required] Guid requestId)
+        {
+            try
+            {
+                return Ok(await _adminService.DenyUser(requestId));
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+
+        [HttpPost]
+        [Route("role/add/{userId}/{role}")]
+        public async Task<IActionResult> AddUserToRole(Guid userId, UserType role)
+        {
+            try
+            {
+                return Ok(await _adminService.AddUserToRole(userId, role));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpDelete]
+        [Route("role/remove/{userId}/{role}")]
+        public async Task<IActionResult> RemoveUserFromRole(Guid userId, UserType role)
+        {
+            try
+            {
+                return Ok(await _adminService.RemoveUserFromRole(userId, role));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }
