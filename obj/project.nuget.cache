@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G6LzGxo/5Ks9GFCQT9b0F/PeUkPSnEc15Oyaw1PrC7rXsn45OgBJU4KIfqZSY89LR9Bf6eK+vnrdDu5ZMy0FjA==",
+  "dgSpecHash": "/wduca2DKVQTi+f/GgEX/t+8YlQmdK22Tsbm0AyGDRfUWoIW8oP1X8uCYIcqa4n8IxfBBjF4wgWsJ5d14FclDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Cabinet_Prototype.csproj",
+  "projectFilePath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qq777\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\qq777\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

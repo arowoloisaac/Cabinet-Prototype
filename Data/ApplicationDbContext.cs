@@ -36,13 +36,14 @@ namespace Cabinet_Prototype.Data
             base.OnModelCreating(builder);
 
             builder.Entity<CourseTeacher>()
-            .HasKey(ct => ct.Id);
-            
+                .HasKey(ct => ct.Id);
+
             builder.Entity<CourseTeacher>()
-            .HasOne<User>() 
-            .WithMany(u => u.CourseTeachers) 
-            .HasForeignKey(ct => ct.TeacherId) 
-            .IsRequired(); 
+                .HasOne(ct => ct.Teacher) // 指定导航属性
+                .WithMany(u => u.CourseTeachers) // 指定反向导航
+                .HasForeignKey(ct => ct.TeacherId) // 指定外键
+                .IsRequired()
+                .OnDelete(DeleteBehavior.NoAction); // 修改级联删除行为为NoAction
         }
     }
 }

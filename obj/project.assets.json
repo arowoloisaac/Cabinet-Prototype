@@ -4550,11 +4550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Cabinet_Prototype.csproj",
+      "projectUniqueName": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
       "projectName": "Cabinet_Prototype",
-      "projectPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\Cabinet_Prototype.csproj",
+      "projectPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
       "packagesPath": "C:\\Users\\qq777\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype1\\obj\\",
+      "outputPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vistual studio\\shared\\NuGetPackages"

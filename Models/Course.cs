@@ -1,4 +1,6 @@
-﻿namespace Cabinet_Prototype.Models
+﻿using Cabinet_Prototype.Enums;
+
+namespace Cabinet_Prototype.Models
 {
     // same idea with discipline
     public class Course
@@ -14,6 +16,8 @@
         public string Reading {  get; set; } = string.Empty;
 
         public string Year {  get; set; } = string.Empty;
+
+        public Semester Semester {  get; set; }
 
         public Guid GroupId { get; set; }
 

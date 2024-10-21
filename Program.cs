@@ -20,6 +20,7 @@ using Cabinet_Prototype.Services.FacultyService;
 using Cabinet_Prototype.Services.DirectionService;
 using Cabinet_Prototype.Services.GroupService;
 using Cabinet_Prototype.Services.CourseService;
+using System.Text.Json.Serialization;
 
 namespace Cabinet_Prototype
 {
@@ -136,7 +137,12 @@ namespace Cabinet_Prototype
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                 };
             });
-            
+
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
+
             var app = builder.Build();
 
             using var serviceScope = app.Services.CreateScope();
