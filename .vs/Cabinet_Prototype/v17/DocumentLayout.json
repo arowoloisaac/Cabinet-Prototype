@@ -7,40 +7,48 @@
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\services\\courseservice\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\courseservice\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\dtos\\coursedtos\\courseeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\coursedtos\\courseeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\services\\courseservice\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\courseservice\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\services\\courseservice\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\courseservice\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\models\\courseteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\courseteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\models\\tokenresonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\tokenresonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:models\\userrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\services\\directionservice\\directionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\directionservice\\directionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\facultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\enums\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:enums\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,16 +103,8 @@
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:services\\initialization\\identityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\dtos\\coursedtos\\courseshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\coursedtos\\courseshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\dtos\\coursedtos\\courseteacherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\coursedtos\\courseteacherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\dtos\\coursedtos\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|solutionrelative:dtos\\coursedtos\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2880A593-9101-46C9-A907-7889A11EBE3E}|Cabinet_Prototype.csproj|c:\\users\\qq777\\desktop\\cabinet-prototype2\\dtos\\coursedtos\\courseteachershowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,36 +118,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Group.cs",
-              "RelativeDocumentMoniker": "Enums\\Group.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Group.cs",
-              "RelativeToolTip": "Enums\\Group.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:32:10.112Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FacultyType.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\FacultyType.cs",
-              "RelativeDocumentMoniker": "Enums\\FacultyType.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\FacultyType.cs",
-              "RelativeToolTip": "Enums\\FacultyType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:32:11.705Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -178,28 +150,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAQwI8AAAAPAAAA",
+              "DocumentIndex": 11,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Group.cs",
+              "RelativeDocumentMoniker": "Enums\\Group.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Group.cs",
+              "RelativeToolTip": "Enums\\Group.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T23:00:48.732Z",
+              "WhenOpened": "2024-10-20T22:32:10.112Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FacultyType.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\FacultyType.cs",
+              "RelativeDocumentMoniker": "Enums\\FacultyType.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\FacultyType.cs",
+              "RelativeToolTip": "Enums\\FacultyType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:32:11.705Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserRequests.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\UserRequests.cs",
-              "RelativeDocumentMoniker": "Models\\UserRequests.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\UserRequests.cs",
-              "RelativeToolTip": "Models\\UserRequests.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCQAAAAgAAAA",
+              "Title": "CourseEditDTO.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseEditDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\CourseDTOs\\CourseEditDTO.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseEditDTO.cs*",
+              "RelativeToolTip": "DTOs\\CourseDTOs\\CourseEditDTO.cs*",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:35:53.439Z",
+              "WhenOpened": "2024-10-21T21:22:03.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\CourseService.cs",
+              "RelativeDocumentMoniker": "Services\\CourseService\\CourseService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\CourseService.cs*",
+              "RelativeToolTip": "Services\\CourseService\\CourseService.cs*",
+              "ViewState": "AQIAAC4BAAAAAAAAAAAuwEUBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:31:25.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IcourseService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\IcourseService.cs",
+              "RelativeDocumentMoniker": "Services\\CourseService\\IcourseService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\IcourseService.cs*",
+              "RelativeToolTip": "Services\\CourseService\\IcourseService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:35:59.852Z",
               "EditorCaption": ""
             },
             {
@@ -210,40 +223,14 @@
               "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Controllers\\CourseController.cs*",
               "RelativeToolTip": "Controllers\\CourseController.cs*",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAkwJYAAAAJAAAA",
+              "ViewState": "AQIAANEAAAAAAAAAAAAAAPkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T22:30:57.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Semester.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Semester.cs",
-              "RelativeDocumentMoniker": "Enums\\Semester.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Semester.cs",
-              "RelativeToolTip": "Enums\\Semester.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:32:06.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\CourseService.cs",
-              "RelativeDocumentMoniker": "Services\\CourseService\\CourseService.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\CourseService.cs*",
-              "RelativeToolTip": "Services\\CourseService\\CourseService.cs*",
-              "ViewState": "AQIAAJoAAAAAAAAAAAAcwMYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:31:25.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "CourseTeacher.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\CourseTeacher.cs",
               "RelativeDocumentMoniker": "Models\\CourseTeacher.cs",
@@ -256,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "TokenResonse.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\TokenResonse.cs",
               "RelativeDocumentMoniker": "Models\\TokenResonse.cs",
@@ -269,20 +256,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IcourseService.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\IcourseService.cs",
-              "RelativeDocumentMoniker": "Services\\CourseService\\IcourseService.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\CourseService\\IcourseService.cs*",
-              "RelativeToolTip": "Services\\CourseService\\IcourseService.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA4AAAA",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAQwI8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:35:59.852Z",
+              "WhenOpened": "2024-10-20T23:00:48.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "UserRequests.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\UserRequests.cs",
+              "RelativeDocumentMoniker": "Models\\UserRequests.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\UserRequests.cs",
+              "RelativeToolTip": "Models\\UserRequests.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCQAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:35:53.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Semester.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Semester.cs",
+              "RelativeDocumentMoniker": "Enums\\Semester.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Enums\\Semester.cs",
+              "RelativeToolTip": "Enums\\Semester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:32:06.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DirectionService.cs",
+              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\DirectionService\\DirectionService.cs",
+              "RelativeDocumentMoniker": "Services\\DirectionService\\DirectionService.cs",
+              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\DirectionService\\DirectionService.cs",
+              "RelativeToolTip": "Services\\DirectionService\\DirectionService.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T00:32:24.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Models\\Course.cs",
@@ -295,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "20241020224725_AddCourseSemester2.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Migrations\\20241020224725_AddCourseSemester2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241020224725_AddCourseSemester2.cs",
@@ -308,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "20241020223726_AddCourseSemester2.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Migrations\\20241020223726_AddCourseSemester2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241020223726_AddCourseSemester2.cs",
@@ -321,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -334,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Models\\Role.cs",
@@ -347,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Direction.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\Direction.cs",
               "RelativeDocumentMoniker": "Models\\Direction.cs",
@@ -360,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -373,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "IFacultyService.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\FacultyService\\IFacultyService.cs",
               "RelativeDocumentMoniker": "Services\\FacultyService\\IFacultyService.cs",
@@ -386,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "20241020223013_AddCourseSemester.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Migrations\\20241020223013_AddCourseSemester.cs",
               "RelativeDocumentMoniker": "Migrations\\20241020223013_AddCourseSemester.cs",
@@ -399,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "FacultyService.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\FacultyService\\FacultyService.cs",
               "RelativeDocumentMoniker": "Services\\FacultyService\\FacultyService.cs",
@@ -412,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\UserService\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService\\UserService.cs",
@@ -425,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\UserService\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService\\IUserService.cs",
@@ -438,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IdentityConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Services\\Initialization\\IdentityConfiguration.cs",
               "RelativeDocumentMoniker": "Services\\Initialization\\IdentityConfiguration.cs",
@@ -464,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "CourseTeacherDTO.cs",
               "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseTeacherDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\CourseDTOs\\CourseTeacherDTO.cs",
@@ -473,32 +499,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T22:31:54.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CourseShowDTO.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseShowDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\CourseDTOs\\CourseShowDTO.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseShowDTO.cs",
-              "RelativeToolTip": "DTOs\\CourseDTOs\\CourseShowDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:31:53.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CourseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\CourseDTOs\\CourseDTO.cs",
-              "ToolTip": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\DTOs\\CourseDTOs\\CourseDTO.cs",
-              "RelativeToolTip": "DTOs\\CourseDTOs\\CourseDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:31:52.504Z",
               "EditorCaption": ""
             }
           ]

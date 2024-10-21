@@ -7,6 +7,8 @@ using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Data;
 
 namespace Cabinet_Prototype.Services.CourseService
 {
@@ -71,14 +73,14 @@ namespace Cabinet_Prototype.Services.CourseService
         {
             IQueryable<Course> query = _dbContext.Courses;
 
-            if (roles.Contains("teacher"))
+            if (roles.Contains("Teacher"))
             {
-                // 教师只能看到他们教授的课程
+                // Teacher only can see there teachs course
                 query = _dbContext.Courses.Where(c => c.CourseTeachers.Any(ct => ct.TeacherId.ToString() == userId));
             }
-            else if (roles.Contains("student"))
+            else if (roles.Contains("Student"))
             {
-                // 学生只能看到他们所在组的课程
+                // Students only can see the course belong their group
                 query = _dbContext.Courses.Where(c => c.Group.StudentGroup.Any(s => s.StudentGroupId.ToString() == userId));
             }
 
@@ -121,18 +123,16 @@ namespace Cabinet_Prototype.Services.CourseService
         {
             IQueryable<Course> query = _dbContext.Courses;
 
-            if (roles.Contains("teacher"))
+            if (roles.Contains("Teacher"))
             {
-                // 教师只能看到他们教授的课程
                 query = query.Where(c => c.CourseTeachers.Any(ct => ct.TeacherId.ToString() == userId));
             }
-            else if (roles.Contains("student"))
+            else if (roles.Contains("Student"))
             {
-                // 学生只能看到他们所在组的课程
                 query = query.Where(c => c.Group.StudentGroup.Any(s => s.StudentGroupId.ToString() == userId));
             }
 
-            // 添加对学期的可选筛选
+            // add querty of semester
             if (semesterFilter.HasValue)
             {
                 query = query.Where(c => c.Semester == semesterFilter.Value);
@@ -189,7 +189,7 @@ namespace Cabinet_Prototype.Services.CourseService
                         LastName = d.Teacher.LastName
                     }).ToList()
                 })
-                .ToListAsync(); // Retrieve all courses as a List
+                .ToListAsync(); 
 
             return courses;
         }
@@ -219,7 +219,7 @@ namespace Cabinet_Prototype.Services.CourseService
                        LastName = d.Teacher.LastName
                    }).ToList()
                })
-               .FirstOrDefaultAsync(); // Retrieve the first or default faculty
+               .FirstOrDefaultAsync();
 
             if (course == null)
             {
@@ -228,6 +228,123 @@ namespace Cabinet_Prototype.Services.CourseService
 
             return course;
         }
+
+        public async Task<Message> AddCourseTeacher(string userId, List<string> roles, Guid courseId, Guid teacherId)
+        {
+            var courseTeachers = await _dbContext.CourseTeachers
+                                         .Where(ct => ct.CourseId == courseId)
+                                         .ToListAsync();
+
+            if (roles.Contains("Admin") || courseTeachers.Any(ct => ct.TeacherId.ToString() == userId))
+            {
+                if (courseTeachers.Any(ct => ct.TeacherId == teacherId))
+                {
+                    throw new InvalidOperationException ("Teacher already added to the course.");
+                }
+                else
+                {
+                    var newCourseTeacher = new CourseTeacher
+                    {
+                        CourseId = courseId,
+                        TeacherId = teacherId
+                    };
+                    _dbContext.CourseTeachers.Add(newCourseTeacher);
+                    await _dbContext.SaveChangesAsync();
+                    return new Message ($"Teacher {teacherId} added successfully.");
+                }
+            }
+            else
+            {
+                throw new UnauthorizedAccessException ("Do not have permission to add teachers to this course.");
+            }
+        }
+
+        public async Task<Message> DeleteCourseTeacher(string userId, List<string> roles, Guid courseId, Guid teacherId)
+        {
+            var courseTeachers = await _dbContext.CourseTeachers
+                                         .Where(ct => ct.CourseId == courseId)
+                                         .ToListAsync();
+
+            if(userId == teacherId.ToString())
+            {
+                throw new InvalidOperationException("Could not delete yourself");
+            }
+
+            if (roles.Contains("Admin") || courseTeachers.Any(ct => ct.TeacherId.ToString() == userId))
+            {
+                var teacherToDelete = courseTeachers.FirstOrDefault(ct => ct.TeacherId == teacherId);
+
+                if (teacherToDelete == null)
+                {
+                    throw new KeyNotFoundException("The specified teacher is not assigned to this course.");
+                }
+
+                _dbContext.CourseTeachers.Remove(teacherToDelete);
+                await _dbContext.SaveChangesAsync();
+
+                return new Message ($"Teacher {teacherId} successfully removed from the course." );
+            }
+            else
+            {
+                throw new UnauthorizedAccessException("You do not have permission to remove teachers from this course.");
+            }
+
+        }
+
+
+        public async Task<Message> EditCourse(string userId, List<string> roles, Guid courseId, CourseEditDTO model)
+        {
+            var course = await _dbContext.Courses
+                                 .Include(c => c.CourseTeachers)
+                                 .FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null)
+            {
+                throw new KeyNotFoundException($"Course with ID {courseId} not found.");
+            }
+
+            if (roles.Contains("Admin") || course.CourseTeachers.Any(ct => ct.TeacherId.ToString() == userId))
+            {
+
+                course.Name = model.Name;
+                course.Description = model.Description;
+                course.Literature = model.Literature;
+                course.Reading = model.Reading;
+                course.Year = model.Year;
+                course.Semester = model.Semester;
+                course.GroupId = model.GroupId;
+
+                return new Message($"Course {courseId} successfully edit.");
+            }
+            else
+            {
+                throw new UnauthorizedAccessException("You do not have permission to edit course.");
+            }
+
+        }
+
+        public async Task<Message> DeleteCourse(Guid courseId)
+        {
+            var course = await _dbContext.Courses
+                                 .Include(c => c.CourseTeachers)
+                                 .FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null)
+            {
+                throw new KeyNotFoundException($"Course with ID {courseId} not found.");
+            }
+
+            foreach (var teacher in course.CourseTeachers.ToList())
+            {
+                _dbContext.CourseTeachers.Remove(teacher);
+            }
+
+            _dbContext.Courses.Remove(course);
+
+            await _dbContext.SaveChangesAsync();
+
+            return new Message($"Course {courseId} successfully deleted.");
+        }
+
+
 
     }
 }
