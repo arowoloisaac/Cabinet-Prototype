@@ -12,6 +12,8 @@
 
         public ICollection<User>? StudentGroup { get; set; }
 
+        public ICollection<Course>? courses { get; set; }
+
         public Direction Direction { get; set; }
 
         //public ICollection<UserRequests>? UserRequests { get; set; }

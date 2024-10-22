@@ -26,7 +26,7 @@ namespace Cabinet_Prototype.Models
 
         public string GradeNumber { get; set; } = string.Empty;
 
-        public ICollection<Course>? Courses { get; set; }
+        public ICollection<CourseTeacher>? CourseTeachers { get; set; }
 
         public ICollection<Result>? StudentResults { get; set; }
 

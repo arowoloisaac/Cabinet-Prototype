@@ -1,6 +1,7 @@
 ﻿using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Cabinet_Prototype.Data
 {
@@ -28,9 +29,21 @@ namespace Cabinet_Prototype.Data
 
         public DbSet<Result> Results { get; set; }
 
+        public DbSet<CourseTeacher> CourseTeachers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<CourseTeacher>()
+                .HasKey(ct => ct.Id);
+
+            builder.Entity<CourseTeacher>()
+                .HasOne(ct => ct.Teacher) // 指定导航属性
+                .WithMany(u => u.CourseTeachers) // 指定反向导航
+                .HasForeignKey(ct => ct.TeacherId) // 指定外键
+                .IsRequired()
+                .OnDelete(DeleteBehavior.NoAction); // 修改级联删除行为为NoAction
         }
     }
 }

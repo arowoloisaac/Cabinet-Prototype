@@ -4,6 +4,7 @@ using Cabinet_Prototype.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cabinet_Prototype.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241020223013_AddCourseSemester")]
+    partial class AddCourseSemester
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,8 +50,9 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Semester")
-                        .HasColumnType("int");
+                    b.Property<string>("Semester")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Year")
                         .IsRequired()
@@ -254,8 +258,8 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateOnly>("BirthDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -353,8 +357,8 @@ namespace Cabinet_Prototype.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateOnly>("BirthDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -386,19 +390,10 @@ namespace Cabinet_Prototype.Migrations
                     b.Property<decimal>("StudentGroupNumber")
                         .HasColumnType("decimal(20,0)");
 
-                    b.Property<byte[]>("UserPicture")
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<int>("UserType")
                         .HasColumnType("int");
 
-                    b.Property<bool>("isAccepted")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("isApproved")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("isRejected")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -528,13 +523,11 @@ namespace Cabinet_Prototype.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cabinet_Prototype.Models.User", "Teacher")
+                    b.HasOne("Cabinet_Prototype.Models.User", null)
                         .WithMany("CourseTeachers")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Direction", b =>

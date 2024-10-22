@@ -19,6 +19,8 @@ using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
 using Cabinet_Prototype.Services.FacultyService;
 using Cabinet_Prototype.Services.DirectionService;
 using Cabinet_Prototype.Services.GroupService;
+using Cabinet_Prototype.Services.CourseService;
+using System.Text.Json.Serialization;
 
 namespace Cabinet_Prototype
 {
@@ -78,7 +80,7 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<IFacultyService, FacultyService>();
             builder.Services.AddScoped<IDirectionService, DirectionService>();
             builder.Services.AddScoped<IGroupService, GroupService>();
-
+            builder.Services.AddScoped<ICourseService, CourseService>();
 
 
             builder.Services.AddIdentity<User, Role>( options =>
@@ -138,7 +140,12 @@ namespace Cabinet_Prototype
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                 };
             });
-            
+
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
+
             var app = builder.Build();
 
             using var serviceScope = app.Services.CreateScope();

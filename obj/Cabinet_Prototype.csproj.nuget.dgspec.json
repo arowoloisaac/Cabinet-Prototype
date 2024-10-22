@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj",
         "packagesPath": "C:\\Users\\arowo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\obj\\",
+=======
+    "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
+        "projectName": "Cabinet_Prototype",
+        "projectPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
+        "packagesPath": "C:\\Users\\qq777\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\obj\\",
+>>>>>>> courses_function
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arowo\\AppData\\Roaming\\NuGet\\NuGet.Config",
