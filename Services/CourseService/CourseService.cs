@@ -3,10 +3,7 @@ using Cabinet_Prototype.DTOs.CourseDTOs;
 using Cabinet_Prototype.DTOs.DirectionDTOs;
 using Cabinet_Prototype.DTOs.FacultyDTOs;
 using Cabinet_Prototype.DTOs.GroupDTOs;
-<<<<<<< HEAD
-=======
 using Cabinet_Prototype.Enums;
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
 using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -76,21 +73,6 @@ namespace Cabinet_Prototype.Services.CourseService
         {
             IQueryable<Course> query = _dbContext.Courses;
 
-<<<<<<< HEAD
-            // 管理员访问，无需进一步过滤
-            if (roles.Contains("admin"))
-            {
-                // 不进行任何过滤
-            }
-            else if (roles.Contains("teacher"))
-            {
-                // 教师只能看到他们教授的课程
-                query = _dbContext.Courses.Where(c => c.CourseTeachers.Any(ct => ct.TeacherId.ToString() == userId));
-            }
-            else if (roles.Contains("student"))
-            {
-                // 学生只能看到他们所在组的课程
-=======
             if (roles.Contains("Teacher"))
             {
                 // Teacher only can see there teachs course
@@ -99,7 +81,6 @@ namespace Cabinet_Prototype.Services.CourseService
             else if (roles.Contains("Student"))
             {
                 // Students only can see the course belong their group
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
                 query = _dbContext.Courses.Where(c => c.Group.StudentGroup.Any(s => s.StudentGroupId.ToString() == userId));
             }
 
@@ -138,9 +119,6 @@ namespace Cabinet_Prototype.Services.CourseService
 
 
 
-<<<<<<< HEAD
-        public async Task<List<CourseShowDTO>> ShowAllCourses()
-=======
         public async Task<List<CourseShowDTO>> ShowAllCourses(string userId, List<string> roles, Semester? semesterFilter = null)
         {
             IQueryable<Course> query = _dbContext.Courses;
@@ -189,7 +167,6 @@ namespace Cabinet_Prototype.Services.CourseService
 
 
         public async Task<List<CourseShowDTO>> AdminShowAllCourses()
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
         {
             var courses = await _dbContext.Courses
                 .Include(f => f.Group)
@@ -212,18 +189,12 @@ namespace Cabinet_Prototype.Services.CourseService
                         LastName = d.Teacher.LastName
                     }).ToList()
                 })
-<<<<<<< HEAD
-                .ToListAsync(); // Retrieve all courses as a List
-=======
-                .ToListAsync(); 
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
+                .ToListAsync();
 
             return courses;
         }
 
 
-<<<<<<< HEAD
-=======
         public async Task<CourseShowDTO> AdminShowCourseById(Guid CourseId)
         {
             var course = await _dbContext.Courses
@@ -268,7 +239,7 @@ namespace Cabinet_Prototype.Services.CourseService
             {
                 if (courseTeachers.Any(ct => ct.TeacherId == teacherId))
                 {
-                    throw new InvalidOperationException ("Teacher already added to the course.");
+                    throw new InvalidOperationException("Teacher already added to the course.");
                 }
                 else
                 {
@@ -279,12 +250,12 @@ namespace Cabinet_Prototype.Services.CourseService
                     };
                     _dbContext.CourseTeachers.Add(newCourseTeacher);
                     await _dbContext.SaveChangesAsync();
-                    return new Message ($"Teacher {teacherId} added successfully.");
+                    return new Message($"Teacher {teacherId} added successfully.");
                 }
             }
             else
             {
-                throw new UnauthorizedAccessException ("Do not have permission to add teachers to this course.");
+                throw new UnauthorizedAccessException("Do not have permission to add teachers to this course.");
             }
         }
 
@@ -294,7 +265,7 @@ namespace Cabinet_Prototype.Services.CourseService
                                          .Where(ct => ct.CourseId == courseId)
                                          .ToListAsync();
 
-            if(userId == teacherId.ToString())
+            if (userId == teacherId.ToString())
             {
                 throw new InvalidOperationException("Could not delete yourself");
             }
@@ -311,7 +282,7 @@ namespace Cabinet_Prototype.Services.CourseService
                 _dbContext.CourseTeachers.Remove(teacherToDelete);
                 await _dbContext.SaveChangesAsync();
 
-                return new Message ($"Teacher {teacherId} successfully removed from the course." );
+                return new Message($"Teacher {teacherId} successfully removed from the course.");
             }
             else
             {
@@ -374,8 +345,6 @@ namespace Cabinet_Prototype.Services.CourseService
         }
 
 
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
 
     }
 }
-

@@ -49,15 +49,12 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
-<<<<<<< HEAD
 
-=======
         /// <summary>
         /// show course by id (if user is teacher, then show all he teaches course, if user is student, show all course with his group)
         /// </summary>
         /// <param name="courseId"></param>
         /// <returns></returns>
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
         [HttpGet]
         [Route("{courseId}")]
         public async Task<IActionResult> ShowCourseById(Guid courseId)
@@ -89,11 +86,7 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
-<<<<<<< HEAD
-        [HttpGet]
-        [Route("")]
-        public async Task<IActionResult> ShowCourses()
-=======
+
         /// <summary>
         /// show all course (if user is teacher, then show all he teaches course, if user is student, show all course with his group)
         /// </summary>
@@ -134,7 +127,6 @@ namespace Cabinet_Prototype.Controllers
         [Route("admin")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AdminShowAllCourses()
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
         {
             try
             {
@@ -145,9 +137,6 @@ namespace Cabinet_Prototype.Controllers
                     return StatusCode(401, "please login first");
                 }
 
-<<<<<<< HEAD
-                var res = await _courseService.ShowAllCourses();
-=======
                 var res = await _courseService.AdminShowAllCourses();
 
                 return Ok(res);
@@ -307,7 +296,6 @@ namespace Cabinet_Prototype.Controllers
                 }
 
                 var res = await _courseService.DeleteCourse(CourseId);
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
 
                 return Ok(res);
             }
@@ -317,10 +305,5 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
     }
 }

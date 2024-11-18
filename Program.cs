@@ -20,7 +20,6 @@ using Cabinet_Prototype.Services.FacultyService;
 using Cabinet_Prototype.Services.DirectionService;
 using Cabinet_Prototype.Services.GroupService;
 using Cabinet_Prototype.Services.CourseService;
-using System.Text.Json.Serialization;
 
 namespace Cabinet_Prototype
 {
@@ -32,13 +31,13 @@ namespace Cabinet_Prototype
 
             // Add services to the container.
             //https://github.com/juldhais/DateOnlyWebApiExample/blob/master/Program.cs
-            builder.Services.AddControllers().AddJsonOptions( opt => {
+            builder.Services.AddControllers().AddJsonOptions(opt => {
                 opt.JsonSerializerOptions.Converters.Add(new DateonlyConfiguration());
 
             });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen( option =>
+            builder.Services.AddSwaggerGen(option =>
             {
                 option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
                 option.EnableAnnotations();
@@ -68,7 +67,7 @@ namespace Cabinet_Prototype
             });
 
             builder.Services
-                .AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
             builder.Services.AddScoped<IUserPermission, UserPermission>();
@@ -83,7 +82,7 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<ICourseService, CourseService>();
 
 
-            builder.Services.AddIdentity<User, Role>( options =>
+            builder.Services.AddIdentity<User, Role>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.SignIn.RequireConfirmedEmail = false;
@@ -94,7 +93,7 @@ namespace Cabinet_Prototype
                 options.Password.RequiredLength = 8;
             }).AddEntityFrameworkStores<ApplicationDbContext>();
 
-            builder.Services.AddAuthorization( options =>
+            builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy(ApplicationRoleName.Admin, new AuthorizationPolicyBuilder()
                     .RequireClaim(ClaimTypes.Role, ApplicationRoleName.Admin)
@@ -128,7 +127,7 @@ namespace Cabinet_Prototype
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer( options =>
+            }).AddJwtBearer(options =>
             {
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -143,18 +142,12 @@ namespace Cabinet_Prototype
                 };
             });
 
-<<<<<<< HEAD
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
                     policy => policy.WithOrigins("http://localhost:5173") // ÔÊÐíÇ°¶ËµØÖ·
                                     .AllowAnyHeader()
                                     .AllowAnyMethod());
-=======
-            builder.Services.AddControllers().AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
->>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
             });
 
             var app = builder.Build();
@@ -181,7 +174,7 @@ namespace Cabinet_Prototype
 
             await app.ConfigureRole();
             await app.ConfigureAdmin();
-            
+
             app.MapControllers();
 
             app.Run();
