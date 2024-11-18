@@ -20,6 +20,7 @@ using Cabinet_Prototype.Services.FacultyService;
 using Cabinet_Prototype.Services.DirectionService;
 using Cabinet_Prototype.Services.GroupService;
 using Cabinet_Prototype.Services.CourseService;
+using System.Text.Json.Serialization;
 
 namespace Cabinet_Prototype
 {
@@ -142,12 +143,18 @@ namespace Cabinet_Prototype
                 };
             });
 
+<<<<<<< HEAD
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
                     policy => policy.WithOrigins("http://localhost:5173") // ÔÊÐíÇ°¶ËµØÖ·
                                     .AllowAnyHeader()
                                     .AllowAnyMethod());
+=======
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+>>>>>>> dc0e8aa32f27588518d3ed71c4f1e891d9673395
             });
 
             var app = builder.Build();
