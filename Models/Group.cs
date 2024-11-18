@@ -1,4 +1,6 @@
-﻿namespace Cabinet_Prototype.Models
+﻿using Microsoft.Identity.Client;
+
+namespace Cabinet_Prototype.Models
 {
     public class Group
     {
@@ -12,7 +14,7 @@
 
         public ICollection<User>? StudentGroup { get; set; }
 
-        public ICollection<Course>? courses { get; set; }
+        public ICollection<Course>? Courses { get; set; }
 
         public Direction Direction { get; set; }
 

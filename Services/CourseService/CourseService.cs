@@ -1,6 +1,8 @@
 ﻿using Cabinet_Prototype.Data;
 using Cabinet_Prototype.DTOs.CourseDTOs;
 using Cabinet_Prototype.DTOs.DirectionDTOs;
+using Cabinet_Prototype.DTOs.FacultyDTOs;
+using Cabinet_Prototype.DTOs.GroupDTOs;
 using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +45,7 @@ namespace Cabinet_Prototype.Services.CourseService
                 Reading = model.Reading,
                 Year = model.Year,
                 GroupId = model.GroupId,
+                Semester = model.Semester,
             };
 
             _dbContext.Courses.Add(course);
@@ -62,6 +65,91 @@ namespace Cabinet_Prototype.Services.CourseService
 
             return course.Id;
         }
+
+        public async Task<CourseShowDTO> ShowCourseById(Guid courseId, string userId, List<string> roles)
+        {
+            IQueryable<Course> query = _dbContext.Courses;
+
+            // 管理员访问，无需进一步过滤
+            if (roles.Contains("admin"))
+            {
+                // 不进行任何过滤
+            }
+            else if (roles.Contains("teacher"))
+            {
+                // 教师只能看到他们教授的课程
+                query = _dbContext.Courses.Where(c => c.CourseTeachers.Any(ct => ct.TeacherId.ToString() == userId));
+            }
+            else if (roles.Contains("student"))
+            {
+                // 学生只能看到他们所在组的课程
+                query = _dbContext.Courses.Where(c => c.Group.StudentGroup.Any(s => s.StudentGroupId.ToString() == userId));
+            }
+
+            var course = await query
+                .Where(f => f.Id == courseId)
+                .Include(f => f.Group)
+                .Include(f => f.CourseTeachers)
+                    .ThenInclude(d => d.Teacher)
+                .Select(f => new CourseShowDTO
+                {
+                    CourseId = f.Id,
+                    Name = f.Name,
+                    Description = f.Description,
+                    Literature = f.Literature,
+                    Reading = f.Reading,
+                    Year = f.Year,
+                    GroupId = f.GroupId,
+                    Semester = f.Semester,
+                    GroupName = f.Group.GroupNumber,
+                    CourseTeachers = f.CourseTeachers.Select(d => new CourseTeacherShowDTO
+                    {
+                        TeacherId = d.TeacherId,
+                        FirstName = d.Teacher.FirstName,
+                        LastName = d.Teacher.LastName
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
+
+            if (course == null)
+            {
+                throw new KeyNotFoundException($"No course found with ID: {courseId}");
+            }
+
+            return course;
+        }
+
+
+
+        public async Task<List<CourseShowDTO>> ShowAllCourses()
+        {
+            var courses = await _dbContext.Courses
+                .Include(f => f.Group)
+                .Include(f => f.CourseTeachers)
+                    .ThenInclude(d => d.Teacher)
+                .Select(f => new CourseShowDTO
+                {
+                    CourseId = f.Id,
+                    Name = f.Name,
+                    Description = f.Description,
+                    Literature = f.Literature,
+                    Reading = f.Reading,
+                    Year = f.Year,
+                    GroupId = f.GroupId,
+                    GroupName = f.Group.GroupNumber,
+                    CourseTeachers = f.CourseTeachers.Select(d => new CourseTeacherShowDTO
+                    {
+                        TeacherId = d.TeacherId,
+                        FirstName = d.Teacher.FirstName,
+                        LastName = d.Teacher.LastName
+                    }).ToList()
+                })
+                .ToListAsync(); // Retrieve all courses as a List
+
+            return courses;
+        }
+
+
 
     }
 }

@@ -10,7 +10,6 @@ namespace Cabinet_Prototype.Controllers
 {
     [Route("api/group")]
     [ApiController]
-    [Authorize(Roles ="Admin")]
     public class GroupController:ControllerBase
     {
         private readonly IGroupService _groupService;
@@ -27,6 +26,7 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("add-group")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddGroup(GroupDTO model)
         {
             try
@@ -56,18 +56,10 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("list/{DirectionId}")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> ShowGroupList(Guid DirectionId)
         {
             try
             {
-                var claim = User.FindFirst(ClaimTypes.Authentication);
-
-                if (claim == null)
-                {
-                    return StatusCode(401, "please login first");
-                }
-
                 var res = await _groupService.ShowGroupList(DirectionId);
 
                 return Ok(res);

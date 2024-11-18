@@ -15,6 +15,8 @@
 
         public string Year {  get; set; } = string.Empty;
 
+        public string Semester {  get; set; } = string.Empty;
+
         public Guid GroupId { get; set; }
 
         public ICollection<Schedule>? Schedules { get; set; }

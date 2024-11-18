@@ -54,17 +54,10 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("list/{FacultyId}")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> ShowDirectionList(Guid FacultyId)
         {
             try
             {
-                var claim = User.FindFirst(ClaimTypes.Authentication);
-
-                if (claim == null)
-                {
-                    return StatusCode(401, "please login first");
-                }
 
                 var res = await _directionService.ShowDirectionList(FacultyId);
 

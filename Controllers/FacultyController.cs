@@ -54,17 +54,10 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetFacultyList()
         {
             try
             {
-                var claim = User.FindFirst(ClaimTypes.Authentication);
-
-                if (claim == null)
-                {
-                    return StatusCode(401, "please login first");
-                }
 
                 var res = await _facultyService.ShowFacultyList();
 

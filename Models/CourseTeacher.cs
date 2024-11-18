@@ -8,6 +8,7 @@
 
         public Guid TeacherId { get; set; }
 
+        public User Teacher { get; set; }
 
     }
 }

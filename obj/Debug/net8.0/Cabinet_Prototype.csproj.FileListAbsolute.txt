@@ -294,3 +294,5 @@ C:\Users\qq777\Desktop\Cabinet-Prototype1\obj\Debug\net8.0\refint\Cabinet_Protot
 C:\Users\qq777\Desktop\Cabinet-Prototype1\obj\Debug\net8.0\Cabinet_Prototype.pdb
 C:\Users\qq777\Desktop\Cabinet-Prototype1\obj\Debug\net8.0\Cabinet_Prototype.genruntimeconfig.cache
 C:\Users\qq777\Desktop\Cabinet-Prototype1\obj\Debug\net8.0\ref\Cabinet_Prototype.dll
+C:\Users\qq777\Desktop\Cabinet-Prototype1\bin\Debug\net8.0\package-lock.json
+C:\Users\qq777\Desktop\Cabinet-Prototype1\bin\Debug\net8.0\package.json

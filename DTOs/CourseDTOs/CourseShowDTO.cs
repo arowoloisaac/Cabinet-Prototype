@@ -1,9 +1,8 @@
-﻿using Cabinet_Prototype.Models;
-
-namespace Cabinet_Prototype.DTOs.CourseDTOs
+﻿namespace Cabinet_Prototype.DTOs.CourseDTOs
 {
-    public class CourseDTO
+    public class CourseShowDTO
     {
+        public Guid CourseId { get; set; }
 
         public string Name { get; set; } = string.Empty;
 
@@ -19,6 +18,8 @@ namespace Cabinet_Prototype.DTOs.CourseDTOs
 
         public Guid GroupId { get; set; }
 
-        public List<CourseTeacherDTO> CourseTeachers { get; set; }
+        public ulong GroupName { get; set; }
+
+        public List<CourseTeacherShowDTO> CourseTeachers { get; set; }
     }
 }

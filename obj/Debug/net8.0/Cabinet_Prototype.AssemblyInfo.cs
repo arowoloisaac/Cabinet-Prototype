@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cabinet_Prototype")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a52dc2e3d201a446bfc291cd2a9374abb7d8d4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2081a0c4c4b931aa378be844b9511cbccf632042")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cabinet_Prototype")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cabinet_Prototype")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

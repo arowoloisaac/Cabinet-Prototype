@@ -137,10 +137,24 @@ namespace Cabinet_Prototype
                     ValidAudience = jwtConfig.Audience,
                     ValidIssuer = jwtConfig.Issuer,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
+                    NameClaimType = ClaimTypes.NameIdentifier,
+                    RoleClaimType = ClaimTypes.Role
                 };
             });
-            
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend",
+                    policy => policy.WithOrigins("http://localhost:5173") // ‘ –Ì«∞∂Àµÿ÷∑
+                                    .AllowAnyHeader()
+                                    .AllowAnyMethod());
+            });
+
             var app = builder.Build();
+
+            app.UseCors("AllowFrontend");
+
+            app.MapControllers();
 
             using var serviceScope = app.Services.CreateScope();
             var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();

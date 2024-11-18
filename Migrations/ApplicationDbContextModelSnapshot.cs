@@ -32,9 +32,6 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("GroupId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Literature")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -47,36 +44,14 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Year")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GroupId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Courses", (string)null);
-                });
-
-            modelBuilder.Entity("Cabinet_Prototype.Models.CourseTeacher", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CourseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TeacherId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("TeacherId");
-
-                    b.ToTable("CourseTeachers", (string)null);
                 });
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Direction", b =>
@@ -508,26 +483,9 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Course", b =>
                 {
-                    b.HasOne("Cabinet_Prototype.Models.Group", "Group")
-                        .WithMany()
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Group");
-                });
-
-            modelBuilder.Entity("Cabinet_Prototype.Models.CourseTeacher", b =>
-                {
-                    b.HasOne("Cabinet_Prototype.Models.Course", null)
-                        .WithMany("CourseTeachers")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Cabinet_Prototype.Models.User", null)
-                        .WithMany("CourseTeachers")
-                        .HasForeignKey("TeacherId")
+                        .WithMany("Courses")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -660,8 +618,6 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.Course", b =>
                 {
-                    b.Navigation("CourseTeachers");
-
                     b.Navigation("Results");
 
                     b.Navigation("Schedules");
@@ -690,7 +646,7 @@ namespace Cabinet_Prototype.Migrations
 
             modelBuilder.Entity("Cabinet_Prototype.Models.User", b =>
                 {
-                    b.Navigation("CourseTeachers");
+                    b.Navigation("Courses");
 
                     b.Navigation("Schedules");
 
