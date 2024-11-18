@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj",
+        "projectName": "Cabinet_Prototype",
+        "projectPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\Cabinet_Prototype.csproj",
+        "packagesPath": "C:\\Users\\arowo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arowo\\source\\repos\\Cabinet_Prototype\\obj\\",
+=======
+>>>>>>> 66e56cd7bb87b0226c2e0aef7231d92a46a96ef0
     "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj": {}
   },
   "projects": {
@@ -12,6 +28,10 @@
         "projectPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\Cabinet_Prototype.csproj",
         "packagesPath": "C:\\Users\\qq777\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\qq777\\Desktop\\Cabinet-Prototype2\\obj\\",
+<<<<<<< HEAD
+=======
+>>>>>>> courses_function
+>>>>>>> 66e56cd7bb87b0226c2e0aef7231d92a46a96ef0
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vistual studio\\shared\\NuGetPackages"
