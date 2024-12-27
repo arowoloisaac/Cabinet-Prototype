@@ -19,3 +19,4 @@ namespace Cabinet_Prototype.DTOs.CourseDTOs
         public Guid GroupId { get; set; }
     }
 }
+ 

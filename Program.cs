@@ -145,7 +145,7 @@ namespace Cabinet_Prototype
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
-                    policy => policy.WithOrigins("http://localhost:5173") // ÔÊÐíÇ°¶ËµØÖ·
+                    policy => policy.WithOrigins("http://localhost:5173") // ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ëµï¿½Ö·
                                     .AllowAnyHeader()
                                     .AllowAnyMethod());
             });
