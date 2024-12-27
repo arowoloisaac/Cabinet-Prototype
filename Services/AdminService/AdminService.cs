@@ -4,6 +4,7 @@ using Cabinet_Prototype.Data;
 using Cabinet_Prototype.DTOs.UserDTOs;
 using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Models;
+using Cabinet_Prototype.Services.EmailService;
 using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
@@ -18,14 +19,16 @@ namespace Cabinet_Prototype.Services.AdminService
         private readonly ApplicationDbContext _dbContext;
         private readonly UserManager<User> _userManager;
         private readonly IPasswordGen _passwordGen;
-
+        private readonly IEmailService _emailService;
         private int passwordLength = 9;
 
-        public AdminService(ApplicationDbContext dbContext, UserManager<User> userManager, IPasswordGen passwordGen)
+        public AdminService(ApplicationDbContext dbContext, UserManager<User> userManager, 
+            IPasswordGen passwordGen, IEmailService emailService)
         {
             _dbContext = dbContext;
             _userManager = userManager;
             _passwordGen = passwordGen;
+            _emailService = emailService;
         }
 
         public async Task<Message> AddUser(Guid RequestId)
@@ -84,6 +87,12 @@ namespace Cabinet_Prototype.Services.AdminService
                 {
                     var getCreatedUser = await _userManager.FindByEmailAsync(user.Email);
 
+                    string subject = "";
+                    string description = "";
+
+
+                    await _emailService.SendEmail(getCreatedUser.Email, subject, description);
+
                     await InitialUserToRole(getCreatedUser);
 
                     searchRequest.isApproved = true;
@@ -109,12 +118,17 @@ namespace Cabinet_Prototype.Services.AdminService
 
             if (findUser != null)
             {
-                var requests = await _dbContext.UserRequests.Where(filter => !filter.isApproved).ToListAsync();
+                var requests = await _dbContext.UserRequests.Where(filter => filter.isApproved== false).ToListAsync();
 
-                if (requests == null)
-                {
-                    return new List<UserRequestDto>();
-                }
+                //if (requests == null)
+                //{
+
+                //    _emailService.SendEmail("", "", "");
+
+                //    return new List<UserRequestDto>();
+                //}
+
+                await _emailService.SendEmail("arowoloisaac01@gmail.com", "null", "null");
 
                 var responseList = requests.Select(request => new UserRequestDto
                 {

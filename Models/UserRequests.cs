@@ -30,7 +30,7 @@ namespace Cabinet_Prototype.Models
         // public ImageModel? Image { get; set; }
         //public string Faculty {  get; set; } = string.Empty;
 
-        public bool isApproved { get; set; } = false;
+        public bool? isApproved { get; set; } = false;
 
         public bool isAccepted { get; set; } = false; 
 

@@ -40,9 +40,9 @@ namespace Cabinet_Prototype.Controllers
                     return Ok(await _adminService.GetRequests(claimUserAdmin.Value));
                 }
             }
-            catch
+            catch (Exception ex) 
             { 
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
