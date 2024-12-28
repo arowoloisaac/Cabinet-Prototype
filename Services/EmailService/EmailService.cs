@@ -29,10 +29,13 @@ namespace Cabinet_Prototype.Services.EmailService
 
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
+                
                 Port = 587,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(senderEmail, senderPwd),
                 EnableSsl = true,
+                UseDefaultCredentials = false,
+                DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential(senderEmail, senderPwd),
+                Timeout = 20000,
             };
 
             var mailMessage = new MailMessage
@@ -49,7 +52,6 @@ namespace Cabinet_Prototype.Services.EmailService
             smtpClient.Send(mailMessage);
 
             return em2;
-            //throw new NotImplementedException();
         }
     }
 }

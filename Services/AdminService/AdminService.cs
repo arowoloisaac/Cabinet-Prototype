@@ -87,8 +87,11 @@ namespace Cabinet_Prototype.Services.AdminService
                 {
                     var getCreatedUser = await _userManager.FindByEmailAsync(user.Email);
 
-                    string subject = "";
-                    string description = "";
+                    string subject = "Your Cabinet Account Password";
+                    string description = $"<h3>Hello {getCreatedUser.FirstName} {getCreatedUser.LastName} </h3>/n" +
+                        "We noticed that you created an account with your credientials intact, to validate your account for perfect security and also assured that you created " +
+                        "the account." +
+                        $"Your password: {generateUserPassword}";
 
 
                     await _emailService.SendEmail(getCreatedUser.Email, subject, description);
@@ -102,13 +105,6 @@ namespace Cabinet_Prototype.Services.AdminService
                 await _dbContext.SaveChangesAsync();
 
                 return new Message("Done with task");
-                
-
-
-
-                //update the userRequest table by setting the isApproved to true
-
-                // messaging queue for the user to receive their password
             }
         }
 
@@ -120,15 +116,12 @@ namespace Cabinet_Prototype.Services.AdminService
             {
                 var requests = await _dbContext.UserRequests.Where(filter => filter.isApproved== false).ToListAsync();
 
-                //if (requests == null)
-                //{
+                if (requests == null)
+                {
+                    return new List<UserRequestDto>();
+                }
 
-                //    _emailService.SendEmail("", "", "");
-
-                //    return new List<UserRequestDto>();
-                //}
-
-                await _emailService.SendEmail("arowoloisaac01@gmail.com", "null", "null");
+                //await _emailService.SendEmail("arowoloisaac01@gmail.com", "null", "null");
 
                 var responseList = requests.Select(request => new UserRequestDto
                 {
@@ -145,7 +138,6 @@ namespace Cabinet_Prototype.Services.AdminService
         
         public async Task<Message> DenyUser(Guid requestId)
         {
-            //var findRequestId = await _dbContext.UserRequests.FindAsync(requestId);
             var findRequestId = await _dbContext.UserRequests.Where(_ =>  _.Id == requestId && _.isApproved == false).SingleOrDefaultAsync();
 
             if (findRequestId != null)
