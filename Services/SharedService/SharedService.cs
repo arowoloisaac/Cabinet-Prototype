@@ -22,10 +22,30 @@ namespace Cabinet_Prototype.Services.SharedService
             _tokenGenerator = tokenGenerator;
         }
 
-        /**public Task<User> AuthentifyUser(string userId, string roles)
+        public async Task<string> ChangePassword(string oldPassword, string newPassword, string userId)
         {
-            throw new NotImplementedException();
-        }**/
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                throw new ArgumentNullException("User doesn't exist, try registering");
+            }
+            else
+            {
+                if (oldPassword != null && await _userManager.CheckPasswordAsync(user, oldPassword))
+                {
+                    var result = await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
+
+                    if (!result.Succeeded)
+                    {
+                        throw new Exception("unable to save password, system error");
+                    }
+
+                    return "New passord successful saved";
+                }
+                throw new Exception(" Password doesn't match");
+            }
+        }
 
         public async Task<TokenResonse> Login(LoginDto loginDto)
         {
@@ -72,14 +92,12 @@ namespace Cabinet_Prototype.Services.SharedService
             {
                 object value;
                 value = updateProfileDto.FirstName == null ? identifyUser.FirstName : identifyUser.FirstName == updateProfileDto.FirstName;
-                //identifyUser.FirstName = updateProfileDto.FirstName;
+
                 value = updateProfileDto.LastName == null ? identifyUser.LastName : identifyUser.LastName == updateProfileDto.LastName;
 
                 value = updateProfileDto.PhoneNumber == null ? identifyUser.PhoneNumber : identifyUser.PhoneNumber = updateProfileDto.PhoneNumber;
 
                 value = updateProfileDto.BirthDate == null ? identifyUser.BirthDate : identifyUser.BirthDate == updateProfileDto.BirthDate;
-                //identifyUser.BirthDate = updateProfileDto.BirthDate;
-                //identifyUser.Avatar = updateProfileDto.ProfilePicture;
 
                 var updateUser = await _userManager.UpdateAsync(identifyUser);
 

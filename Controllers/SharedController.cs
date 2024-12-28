@@ -35,6 +35,30 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("change-password")]
+        [Authorize]
+        public async Task<IActionResult> UpdatePassword(string oldPassword, string newPassword)
+        {
+            try
+            {
+                var getUser = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Authentication);
+
+                if (getUser != null)
+                {
+                    return Ok(await _sharedService.ChangePassword(oldPassword, newPassword, getUser.Value));
+                }
+                else
+                {
+                    return BadRequest("can't find user");
+                }
+            }
+            catch(Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         [HttpGet]
         [Route("profile")]
@@ -49,12 +73,12 @@ namespace Cabinet_Prototype.Controllers
                 {
                     return Ok(await _sharedService.UserProfile(getUser.Value));
                 }
+                else { return BadRequest("can't find user"); }
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-            return Ok();
         }
 
         [HttpPut]

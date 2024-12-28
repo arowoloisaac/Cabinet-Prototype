@@ -8,7 +8,7 @@ namespace Cabinet_Prototype.Services.SharedService
     {
         Task<TokenResonse> Login([FromBody] LoginDto loginDto);
 
-        //Task<User> AuthentifyUser(string userId, string roles);
+        Task<string> ChangePassword(string oldPassword, string newPassword, string userId);
 
         Task<GetProfileDto> UserProfile(string Id);
 
