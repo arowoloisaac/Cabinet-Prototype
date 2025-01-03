@@ -11,11 +11,15 @@ namespace Cabinet_Prototype.Models
         //this to extract both time and day 
         public DateTime ClassTime { get; set; }
 
-        public string Location { get; set; } = string.Empty;
+        public string? Location { get; set; } 
 
-        public string ClassNumber { get; set; } = string.Empty;
+        public string? ClassNumber { get; set; }
 
         public ClassFormat Format { get; set; }
+
+        public Guid CourseId { get; set; }
+
+        public Guid GroupsId { get; set; }
 
         public Course? Course { get; set; }
         

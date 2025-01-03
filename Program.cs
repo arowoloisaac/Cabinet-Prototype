@@ -21,6 +21,7 @@ using Cabinet_Prototype.Services.DirectionService;
 using Cabinet_Prototype.Services.GroupService;
 using Cabinet_Prototype.Services.CourseService;
 using Cabinet_Prototype.Services.EmailService;
+using Cabinet_Prototype.Services.ScheduleSerives;
 
 namespace Cabinet_Prototype
 {
@@ -82,6 +83,7 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<IDirectionService, DirectionService>();
             builder.Services.AddScoped<IGroupService, GroupService>();
             builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<IScheduleService, ScheduleService>();
 
 
             builder.Services.AddIdentity<User, Role>(options =>

@@ -205,7 +205,6 @@ namespace Cabinet_Prototype.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ClassNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ClassTime")
@@ -221,7 +220,6 @@ namespace Cabinet_Prototype.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Location")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("TeacherId")

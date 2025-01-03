@@ -57,6 +57,7 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("{courseId}")]
+        [Authorize]
         public async Task<IActionResult> ShowCourseById(Guid courseId)
         {
             try
@@ -94,6 +95,7 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("")]
+        [Authorize]
         public async Task<IActionResult> ShowAllCourses(Semester? semesterFilter = null)
         {
             try
@@ -184,6 +186,7 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("{TeacherId}")]
+        [Authorize]
         public async Task<IActionResult> AddCourseTeacher(Guid CourseId, Guid TeacherId)
         {
             try
@@ -217,6 +220,7 @@ namespace Cabinet_Prototype.Controllers
         /// <returns></returns>
         [HttpDelete]
         [Route("{TeacherId}")]
+        [Authorize]
         public async Task<IActionResult> DeleteCourseTeacher(Guid CourseId, Guid TeacherId)
         {
             try
