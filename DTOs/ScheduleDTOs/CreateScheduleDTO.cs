@@ -14,7 +14,7 @@ namespace Cabinet_Prototype.DTOs.ScheduleDTOs
         public ClassFormat Format { get; set; }
 
         public Guid TeacherId { get; set; }
-        public Guid CourseId { get; set; }
-        public Guid GroupsId { get; set; }
+        public Guid? CourseId { get; set; }
+        public Guid? GroupsId { get; set; }
     }
 }

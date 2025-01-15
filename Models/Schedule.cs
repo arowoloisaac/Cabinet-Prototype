@@ -17,9 +17,9 @@ namespace Cabinet_Prototype.Models
 
         public ClassFormat Format { get; set; }
 
-        public Guid CourseId { get; set; }
+        public Guid? CourseId { get; set; }
 
-        public Guid GroupsId { get; set; }
+        public Guid? GroupsId { get; set; }
 
         public Course? Course { get; set; }
         
