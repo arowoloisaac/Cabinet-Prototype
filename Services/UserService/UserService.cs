@@ -1,5 +1,6 @@
 ﻿using Cabinet_Prototype.Data;
 using Cabinet_Prototype.DTOs.UserDTOs;
+using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -46,5 +47,27 @@ namespace Cabinet_Prototype.Services.UserService
 
             return ("awaits administrator authorization");
         }
+
+        public async Task<List<TeacherDTO>> GetAllTeachers()
+        {
+            var users = await _userManager.Users.ToListAsync();
+
+            var teachers = new List<TeacherDTO>();
+            foreach (var user in users)
+            {
+                if (await _userManager.IsInRoleAsync(user, "Teacher"))
+                {
+                    teachers.Add(new TeacherDTO
+                    {
+                        Id = user.Id,
+                        Name = $"{user.FirstName} {user.LastName}"
+                    });
+                }
+            }
+
+            return teachers;
+        }
+
+
     }
 }
