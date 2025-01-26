@@ -20,18 +20,18 @@ namespace Cabinet_Prototype.DTOs.UserDTOs
 
         public UserType UserType { get; set; }
 
-        public FacultyType StudentFaculty { get; set; }
+        public Guid StudentFacultyId { get; set; }
 
         //check for the direction in the service, must be in the faculty
-        public string StudentDirection { get; set; } = string.Empty;
+        public Guid StudentDirectionId { get; set; } 
 
         //check for the group in the service, must be in the direction
-        public ulong StudentGroup { get; set; } 
+        public Guid StudentGroupId { get; set; } 
 
         //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;
 
-        public IFormFile? ProfilePicture { get; set; }
+        public string? ProfilePicture { get; set; }
         // public ImageModel? Image { get; set; }
         //public string Faculty {  get; set; } = string.Empty;
 

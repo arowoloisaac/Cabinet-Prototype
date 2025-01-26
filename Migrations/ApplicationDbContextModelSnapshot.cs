@@ -370,19 +370,18 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StudentDirection")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("StudentDirectionId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("StudentFaculty")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StudentFacultyId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("StudentGrade")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("StudentGroupNumber")
-                        .HasColumnType("decimal(20,0)");
+                    b.Property<Guid>("StudentGroupId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<byte[]>("UserPicture")
                         .HasColumnType("varbinary(max)");

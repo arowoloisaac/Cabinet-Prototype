@@ -54,24 +54,18 @@ namespace Cabinet_Prototype.Services.AdminService
 
                 if (searchRequest.UserType == UserType.Student)
                 {
-                    var getFaculty = await _dbContext.Faculties
-                        .SingleOrDefaultAsync(faculty => faculty.Name.ToLower() == searchRequest.StudentFaculty.ToString().ToLower());
+                    user.StudentFacultyId.Id = searchRequest.StudentFacultyId;
+                    user.StudentDirection.Id = searchRequest.StudentDirectionId;
+                    user.StudentGroupId.Id = searchRequest.StudentGroupId;
 
-                    var getDirection = await _dbContext.Directions
-                        .SingleOrDefaultAsync(faculty => faculty.Name.ToLower() == searchRequest.StudentDirection.ToLower());
+                    user.UserType = UserType.Student;
 
-                    var getGroup = await _dbContext.Groups
-                        .SingleOrDefaultAsync(faculty => faculty.GroupNumber == searchRequest.StudentGroupNumber);
-
-                    //set faculty id
-                    user.StudentFacultyId = getFaculty;
-                    user.StudentDirection = getDirection;
-                    user.StudentGroupId = getGroup;
                 }
 
                 else
                 {
                     //continue 
+                    user.UserType = UserType.Teacher;
                 }
 
                 string generateUserPassword = _passwordGen.GeneratePassword(passwordLength);

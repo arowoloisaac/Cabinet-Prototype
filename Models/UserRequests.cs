@@ -20,13 +20,18 @@ namespace Cabinet_Prototype.Models
         [Phone]
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public FacultyType StudentFaculty { get; set; }
 
-        public string StudentDirection { get; set; } = string.Empty;
+        public Guid StudentFacultyId { get; set; }
 
-        public ulong StudentGroupNumber {  get; set; }
+        //check for the direction in the service, must be in the faculty
+        public Guid StudentDirectionId { get; set; }
 
+        //check for the group in the service, must be in the direction
+        public Guid StudentGroupId { get; set; }
+
+        //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;
+
         // public ImageModel? Image { get; set; }
         //public string Faculty {  get; set; } = string.Empty;
 

@@ -17,11 +17,6 @@ namespace Cabinet_Prototype.Models
 
         public string Avatar { get; set; } = string.Empty;
 
-        //public byte[] AvatarBytes { get; set; }
-
-        //this serves as the avatar
-        //public ImageModel? Image { get; set; }
-
         public string? Password { get; set; }
 
         public string GradeNumber { get; set; } = string.Empty;
@@ -38,14 +33,4 @@ namespace Cabinet_Prototype.Models
 
         public Faculty? StudentFacultyId { get; set; }
     }
-
-
-    /**public class ImageModel
-    {
-        public string ImageBase { get; set; } = string.Empty;
-
-        public string FileType { get; set; } = string.Empty ;
-
-        public string? FileName { get; set; }
-    }**/
 }
