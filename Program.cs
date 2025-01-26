@@ -22,6 +22,7 @@ using Cabinet_Prototype.Services.GroupService;
 using Cabinet_Prototype.Services.CourseService;
 using Cabinet_Prototype.Services.EmailService;
 using Cabinet_Prototype.Services.ScheduleSerives;
+using Microsoft.AspNetCore.Identity;
 
 namespace Cabinet_Prototype
 {
@@ -95,7 +96,9 @@ namespace Cabinet_Prototype
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 8;
-            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            })
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders(); // 添加默认令牌提供器
 
             builder.Services.AddAuthorization(options =>
             {

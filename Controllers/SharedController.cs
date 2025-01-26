@@ -104,5 +104,22 @@ namespace Cabinet_Prototype.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("forgot-password")]
+        public async Task<IActionResult> Forgotpassword(string email)
+        {
+            try
+            {
+                var res = await _sharedService.ForgotPassword(email);
+
+                return Ok(res); 
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

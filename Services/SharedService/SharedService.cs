@@ -1,10 +1,15 @@
 ﻿using Azure.Core;
 using Cabinet_Prototype.Configurations;
+using Cabinet_Prototype.Data;
 using Cabinet_Prototype.DTOs.UserDTOs;
+using Cabinet_Prototype.Enums;
 using Cabinet_Prototype.Models;
+using Cabinet_Prototype.Services.EmailService;
+using Cabinet_Prototype.Services.Initialization.PasswordGenerator;
 using Cabinet_Prototype.Services.TokenService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace Cabinet_Prototype.Services.SharedService
@@ -14,12 +19,18 @@ namespace Cabinet_Prototype.Services.SharedService
         private readonly UserManager<User> _userManager;
         private readonly JwtBearerSetting _jwtToken;
         private readonly ITokenGenerator _tokenGenerator;
+        private readonly IPasswordGen _passwordGen;
+        private readonly IEmailService _emailService;
+        private int passwordLength = 9;
 
-        public SharedService(UserManager<User> userManager, IOptions<JwtBearerSetting> jwtOptions, ITokenGenerator tokenGenerator)
+        public SharedService(UserManager<User> userManager, IOptions<JwtBearerSetting> jwtOptions, ITokenGenerator tokenGenerator, 
+            IPasswordGen passwordGen, IEmailService emailService)
         {
             _userManager = userManager;
             _jwtToken = jwtOptions.Value;
             _tokenGenerator = tokenGenerator;
+            _passwordGen = passwordGen;
+            _emailService = emailService;
         }
 
         public async Task<string> ChangePassword(string oldPassword, string newPassword, string userId)
@@ -107,6 +118,37 @@ namespace Cabinet_Prototype.Services.SharedService
                 }
                 return $"User with email has been saved {identifyUser.Email}";
             }
+        }
+
+        public async Task<Message> ForgotPassword(string email)
+        { 
+            var userExit = await _userManager.FindByEmailAsync(email);
+
+            if (userExit == null)
+            {
+                throw new KeyNotFoundException("Could not find this email");
+            }
+
+            string generateUserPassword = _passwordGen.GeneratePassword(passwordLength);
+
+            var resetToken = await _userManager.GeneratePasswordResetTokenAsync(userExit);
+            var resetPasswordResult = await _userManager.ResetPasswordAsync(userExit, resetToken, generateUserPassword);
+
+            if (!resetPasswordResult.Succeeded)
+            {
+                throw new Exception($"Failed to reset password: {string.Join(", ", resetPasswordResult.Errors.Select(e => e.Description))}");
+            }
+
+            string subject = "Your Cabinet Account Password";
+            string description = $"<h3>Hello {userExit.FirstName} {userExit.LastName} </h3>/n" +
+                    "We noticed that you created an account with your credientials intact, to validate your account for perfect security and also assured that you created " +
+                    "the account." +
+                    $"Your password: {generateUserPassword}";
+
+
+            await _emailService.SendEmail(userExit.Email, subject, description);
+
+            return new Message("new password has alerady sended, please check your email");
         }
 
 

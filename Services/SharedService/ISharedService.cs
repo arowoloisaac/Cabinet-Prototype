@@ -13,5 +13,6 @@ namespace Cabinet_Prototype.Services.SharedService
         Task<GetProfileDto> UserProfile(string Id);
 
         Task<string> UpdateUserProfile(UpdateProfileDto profileDto, string userId);
+        Task<Message> ForgotPassword(string email);
     }
 }
