@@ -23,6 +23,8 @@ using Cabinet_Prototype.Services.CourseService;
 using Cabinet_Prototype.Services.EmailService;
 using Cabinet_Prototype.Services.ScheduleSerives;
 using Microsoft.AspNetCore.Identity;
+using Quartz;
+using Cabinet_Prototype.Services.BackgroundJobs;
 
 namespace Cabinet_Prototype
 {
@@ -72,6 +74,21 @@ namespace Cabinet_Prototype
             builder.Services
                 .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddQuartz(q =>
+            {
+                var jobKey = new JobKey("SendAdminEmailJob");
+                q.AddJob<BackgroundJobs>(opts => opts.WithIdentity(jobKey));
+
+                q.AddTrigger(opts => opts
+                    .ForJob(jobKey)
+                    .WithIdentity("SendAdminEmailTrigger")
+                    .WithSimpleSchedule(x => x
+                        .WithInterval(TimeSpan.FromMinutes(30)) 
+                        .RepeatForever()));
+
+            });
+
+            builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 
             builder.Services.AddScoped<IUserPermission, UserPermission>();
             builder.Services.AddScoped<IUserService, UserService>();
@@ -85,7 +102,6 @@ namespace Cabinet_Prototype
             builder.Services.AddScoped<IGroupService, GroupService>();
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<IScheduleService, ScheduleService>();
-
 
             builder.Services.AddIdentity<User, Role>(options =>
             {

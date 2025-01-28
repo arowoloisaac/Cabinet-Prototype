@@ -20,20 +20,13 @@ namespace Cabinet_Prototype.Models
         [Phone]
         public string PhoneNumber { get; set; } = string.Empty;
 
-
         public Guid StudentFacultyId { get; set; }
 
-        //check for the direction in the service, must be in the faculty
         public Guid StudentDirectionId { get; set; }
 
-        //check for the group in the service, must be in the direction
         public Guid StudentGroupId { get; set; }
 
-        //[MaxLength(4)] //here we will work with regex
         public string StudentGrade { get; set; } = string.Empty;
-
-        // public ImageModel? Image { get; set; }
-        //public string Faculty {  get; set; } = string.Empty;
 
         public bool? isApproved { get; set; } = false;
 
@@ -41,12 +34,12 @@ namespace Cabinet_Prototype.Models
 
         public bool isRejected { get; set; }
 
-        //public Guid GroupId { get; set; }
-
         public UserType UserType { get; set; }
 
-        public byte[]? UserPicture { get; set; }
+        public DateTime? RegisteredTime { get; set; }
+
+        public DateTime? RejectedTime { get; set; }
+
+        public RequestStatus RequestStatus { get; set; }
     }
-    /***
-     * in the service i have to create a function that retrieve faculties, direction and group***/
 }

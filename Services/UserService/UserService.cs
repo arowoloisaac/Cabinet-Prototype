@@ -41,6 +41,8 @@ namespace Cabinet_Prototype.Services.UserService
                 StudentDirectionId = dto.StudentDirectionId,
                 BirthDate = dto.BirthDate,
                 PhoneNumber = dto.PhoneNumber,
+                RegisteredTime = DateTime.UtcNow,
+                RequestStatus = RequestStatus.isPending,
             });
             
             await _dbContext.SaveChangesAsync();

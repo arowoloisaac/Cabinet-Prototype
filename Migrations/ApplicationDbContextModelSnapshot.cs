@@ -370,6 +370,15 @@ namespace Cabinet_Prototype.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("RegisteredTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("RejectedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RequestStatus")
+                        .HasColumnType("int");
+
                     b.Property<Guid>("StudentDirectionId")
                         .HasColumnType("uniqueidentifier");
 
@@ -382,9 +391,6 @@ namespace Cabinet_Prototype.Migrations
 
                     b.Property<Guid>("StudentGroupId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<byte[]>("UserPicture")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("UserType")
                         .HasColumnType("int");
